@@ -1,0 +1,57 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  -webkit-box-shadow: 0 -10px 6px -6px #fb9300;
+  -moz-box-shadow: 0 -10px 6px -6px #fb9300;
+  box-shadow: 0 -10px 6px -6px #fb9300;
+}
+.logo {
+  width: auto;
+  height: 35px;
+  float: center;
+  margin: 0 0.25rem;
+}
+.logo svg {
+  width: auto;
+  height: 35px;
+}
+.logo svg path {
+  fill: #ffffff;
+  transition: fill 400ms ease-in;
+}
+
+.logo:hover svg path {
+  fill: #fb9300;
+  transition: fill 400ms ease-out;
+}
+
+.ul {
+  list-style-type: none;
+}
+
+a {
+  color: #111111;
+  border-bottom: 0;
+  transition: color 400ms ease-in;
+  display: inline-block;
+}
+a:hover {
+  color: #fb9300;
+  border-bottom: 0;
+  transition: color 400ms ease-out;
+}
+
+.li {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 1rem;
+  font-weight: 350;
+}
+.data.site.siteMetadata.author {
+  color: black;
+}

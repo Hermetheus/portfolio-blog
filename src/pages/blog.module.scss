@@ -1,0 +1,37 @@
+.posts {
+  list-style-type: none;
+  margin: 0;
+}
+
+.post {
+  margin: 1rem 0;
+
+  a {
+    background: #777777;
+    transition: fill 400ms ease-in;
+    color: #ffffff;
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    box-shadow: 10px 10px 8px #888888;
+    margin-bottom: 35px;
+  }
+
+  a:hover {
+    color: #fb9300;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}
+
+h1 {
+  text-align: center;
+}

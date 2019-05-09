@@ -1,0 +1,14 @@
+.content {
+  flex-grow: 1;
+  padding: 150px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    padding: 75px;
+  }
+}
+
+.h1 {
+  align-content: center;
+}

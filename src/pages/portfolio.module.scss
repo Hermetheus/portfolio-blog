@@ -1,0 +1,24 @@
+span {
+  display: block;
+  text-align: center;
+}
+
+.source {
+  padding-left: 10px;
+}
+
+.projects {
+  display: inline-block;
+  padding: 1.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .projects {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
