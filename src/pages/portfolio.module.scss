@@ -1,6 +1,8 @@
 span {
   display: block;
   text-align: center;
+  width: 550px;
+  height: auto;
 }
 
 .source {
@@ -13,6 +15,11 @@ span {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
+}
+
+.Img {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 600px) {

@@ -55,3 +55,13 @@ a:hover {
 .data.site.siteMetadata.author {
   color: black;
 }
+
+@media screen and (max-width: 600px) {
+  .footer {
+    background-color: #333333;
+    position: fixed;
+    -webkit-box-shadow: 0 4px 3px -3px #fb9300;
+    -moz-box-shadow: 0 4px 3px -3px #fb9300;
+    box-shadow: 0 -4px 3px -3px #fb9300;
+  }
+}

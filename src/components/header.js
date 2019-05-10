@@ -2,15 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import headerStyles from "./header.module.scss"
 
-const ListLink = props => (
-  <li>
-    <Link activeClassName="active" to={props.to}>
-      {props.children}
-    </Link>
-  </li>
-)
-
-const Header = () => {
+const Header = props => {
   return (
     <header className={headerStyles.header}>
       <Link to="/" className={headerStyles.logo}>
@@ -26,7 +18,7 @@ const Header = () => {
             transform="translate(0.000000,485.000000) scale(0.100000,-0.100000)"
             fill="#333333"
             stroke="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <path d="M430 4230 l0 -230 120 0 120 0 0 115 0 115 5020 0 5020 0 0 -115 0 -115 120 0 120 0 0 230 0 230 -5260 0 -5260 0 0 -230z" />
             <path d="M9174 3861 c-199 -44 -359 -142 -485 -298 -142 -177 -208 -366 -209 -595 0 -245 86 -459 260 -642 165 -173 359 -256 601 -256 229 0 428 85 591 254 165 170 253 365 264 585 15 294 -68 512 -271 716 -128 128 -237 192 -395 232 -93 23 -263 25 -356 4z m279 -296 c85 -20 131 -41 203 -94 93 -69 168 -174 215 -301 20 -55 24 -83 24 -190 0 -139 -11 -190 -61 -290 -67 -134 -179 -239 -311 -291 -69 -27 -241 -38 -307 -19 -237 67 -409 277 -430 521 -7 76 7 245 22 277 69 143 82 162 152 233 82 84 148 123 250 150 82 22 161 23 243 4z" />
@@ -61,7 +53,7 @@ const Header = () => {
       </Link>
       <nav className={headerStyles.navigation}>
         <ul className={headerStyles.ul}>
-          <li activeClassName="active" className={headerStyles.li}>
+          <li className={headerStyles.li}>
             <Link to={"/"}>Home</Link>
           </li>
           <li className={headerStyles.li}>

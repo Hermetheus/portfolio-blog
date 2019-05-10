@@ -15,9 +15,7 @@ const Footer = () => {
 
   return (
     <footer className={footerStyles.footer}>
-      <div styles="color: black;" className>
-        ©2019 {data.site.siteMetadata.author}
-      </div>
+      <div>©2019 {data.site.siteMetadata.author}</div>
       <ul className={footerStyles.ul}>
         <a
           href="https://www.linkedin.com"
