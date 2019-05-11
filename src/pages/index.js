@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css"
-import { Link } from "gatsby"
 import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout"
@@ -18,13 +17,12 @@ const IndexPage = () => {
             I am currently a <b>Branch Operations Manager</b> that is self
             teaching how to code. I am extremely passionate about becoming a
             Full-Stack Developer someday and am open to any opportunity that
-            comes my way. If you'd like to get in touch, please send me an email
-            below.
+            comes my way. If you'd like to get in touch, please get in touch!
           </p>
 
-          <Link to="/about" class="button">
-            Learn more
-          </Link>
+          <a href="mailto:allanmolson@gmail.com">
+            <button className={indexStyles.button}>Contact Me</button>
+          </a>
         </div>
       </div>
     </Layout>
