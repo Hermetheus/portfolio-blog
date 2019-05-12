@@ -15,6 +15,11 @@
     text-decoration: none;
     box-shadow: 10px 10px 8px #888888;
     margin-bottom: 35px;
+    -webkit-animation: appear 1s ease 0s 1 normal;
+    -moz-animation: appear 1s ease 0s 1 normal;
+    -ms-animation: appear 1s ease 0s 1 normal;
+    animation: appear 1s ease 0s 1 normal;
+    animation-fill-mode: both;
   }
 
   a:hover {
@@ -34,4 +39,28 @@
 
 h1 {
   text-align: center;
+}
+
+/*Animations */
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
 }

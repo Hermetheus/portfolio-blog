@@ -1,3 +1,43 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.projectBlocks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectCard {
+  padding: 1.5rem;
+  margin: 3rem;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 10px #777777;
+  width: 38%;
+  height: 75;
+  justify-content: space-between;
+  -webkit-animation: appear 1s ease 0s 1 normal;
+  -moz-animation: appear 1s ease 0s 1 normal;
+  -ms-animation: appear 1s ease 0s 1 normal;
+  animation: appear 1s ease 0s 1 normal;
+  animation-fill-mode: both;
+}
+
+.Img {
+  display: flex;
+  position: relative;
+  width: 550px;
+  height: 350px;
+}
+
 span {
   display: block;
   text-align: center;
@@ -9,23 +49,27 @@ span {
   padding-left: 10px;
 }
 
-.projects {
-  display: inline-block;
-  padding: 1.5rem;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-}
+/* Animations */
 
-.Img {
-  width: 100%;
-  height: auto;
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
-
-@media screen and (max-width: 600px) {
-  .projects {
-    display: inline-block;
-    flex-direction: row;
-    justify-content: space-between;
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
   }
 }
