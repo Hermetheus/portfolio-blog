@@ -8,9 +8,9 @@ const PortfolioPage = props => {
   return (
     <Layout>
       <h1>My Projects</h1>
-      <div className={portfolioStyles.projectCard}>
-        <div className={portfolioStyles.card}>
-          <div className={portfolioStyles.projectblocks}>
+      <div className={portfolioStyles.projectBlocks}>
+        <div className={portfolioStyles.projectCard}>
+          <div className={portfolioStyles.card}>
             <a
               href="https://codepen.io/hermetheus/pen/rqGxRM"
               target="_blank"
@@ -31,7 +31,7 @@ const PortfolioPage = props => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Source / Demo
+                <b>Source / Demo</b>
               </a>
             </span>
             <span>
@@ -43,10 +43,8 @@ const PortfolioPage = props => {
             </span>
           </div>
         </div>
-      </div>
-      <div className={portfolioStyles.projectCard}>
-        <div className={portfolioStyles.card}>
-          <div className={portfolioStyles.projectblocks}>
+        <div className={portfolioStyles.projectCard}>
+          <div className={portfolioStyles.card}>
             <a
               href="https://codepen.io/hermetheus/pen/zMKjpo"
               target="_blank"
@@ -68,7 +66,7 @@ const PortfolioPage = props => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Source / Demo
+                <b>Source / Demo</b>
               </a>
             </span>
             <span>
@@ -91,7 +89,7 @@ export const query = graphql`
   query {
     ImageOne: file(relativePath: { eq: "images/image1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 550) {
+        fluid(maxWidth: 1500) {
           base64
           aspectRatio
           src
@@ -102,7 +100,7 @@ export const query = graphql`
     }
     ImageTwo: file(relativePath: { eq: "images/image2.png" }) {
       childImageSharp {
-        fluid(maxWidth: 550) {
+        fluid(maxWidth: 1500) {
           base64
           aspectRatio
           src

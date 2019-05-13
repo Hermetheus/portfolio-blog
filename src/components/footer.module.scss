@@ -1,8 +1,7 @@
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: absolute;
   width: 100%;
+  clear: both;
   background-color: #333333;
   color: white;
   text-align: center;
@@ -59,7 +58,7 @@ a:hover {
 @media screen and (max-width: 600px) {
   .footer {
     background-color: #333333;
-    position: fixed;
+    position: absolute;
     -webkit-box-shadow: 0 4px 3px -3px #fb9300;
     -moz-box-shadow: 0 4px 3px -3px #fb9300;
     box-shadow: 0 -4px 3px -3px #fb9300;

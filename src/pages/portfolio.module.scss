@@ -1,23 +1,29 @@
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.projectCard {
+.projectBlocks {
   display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.projectCard {
   padding: 1.5rem;
   margin: 3rem;
   border-radius: 50px;
+  justify-content: center;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   background-color: #ffffff;
   box-shadow: 0 0 10px 10px #777777;
-  width: 38%;
-  height: 75;
-  justify-content: space-between;
+  max-width: 550px;
   -webkit-animation: appear 1s ease 0s 1 normal;
   -moz-animation: appear 1s ease 0s 1 normal;
   -ms-animation: appear 1s ease 0s 1 normal;
@@ -26,7 +32,8 @@
 }
 
 .Img {
-  width: 550px;
+  display: flex;
+  width: 450px;
   height: 350px;
 }
 
@@ -34,7 +41,6 @@ span {
   display: block;
   text-align: center;
   position: relative;
-  max-width: 550px;
 }
 
 .source {
@@ -63,5 +69,26 @@ span {
   60% {
     opacity: 1;
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Img {
+    width: 300px;
+    height: 150px;
+  }
+
+  .projectCard {
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 10px #777777;
+    max-width: 350px;
+    -webkit-animation: appear 1s ease 0s 1 normal;
+    -moz-animation: appear 1s ease 0s 1 normal;
+    -ms-animation: appear 1s ease 0s 1 normal;
+    animation: appear 1s ease 0s 1 normal;
+    animation-fill-mode: both;
   }
 }
