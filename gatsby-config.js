@@ -4,6 +4,12 @@ module.exports = {
     author: "Allan Wakefield-Olson",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "www.allanmolson.com",
+      },
+    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-sass",
