@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import Head from "../components/head"
-import Layout from "../components/layout"
+import Layout from "../components/main"
 import indexStyles from "./index.module.scss"
 
 const IndexPage = props => {

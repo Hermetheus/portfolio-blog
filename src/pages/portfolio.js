@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/main"
 import portfolioStyles from "./portfolio.module.scss"
 
 const PortfolioPage = props => {
@@ -48,7 +48,7 @@ const PortfolioPage = props => {
         <div className={portfolioStyles.card}>
           <div className={portfolioStyles.projectblocks}>
             <a
-              href="https://codepen.io/hermetheus/pen/rqGxRM"
+              href="https://codepen.io/hermetheus/pen/zMKjpo"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -65,6 +65,8 @@ const PortfolioPage = props => {
               <a
                 className={portfolioStyles.source}
                 href="https://codepen.io/hermetheus/pen/zMKjpo"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Source / Demo
               </a>
