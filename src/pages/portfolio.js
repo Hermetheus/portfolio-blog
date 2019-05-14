@@ -12,6 +12,41 @@ const PortfolioPage = props => {
         <div className={portfolioStyles.projectCard}>
           <div className={portfolioStyles.card}>
             <a
+              href="https://github.com/Hermetheus/portfolio-blog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Img
+                className={portfolioStyles.Img}
+                fluid={props.data.ImageThree.childImageSharp.fluid}
+              />
+            </a>
+
+            <span className={portfolioStyles.span}>
+              <hr />
+              <h3>Gatsby JS Portfolio Page</h3>
+              View Code:
+              <a
+                className={portfolioStyles.source}
+                href="https://github.com/Hermetheus/portfolio-blog"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b>Source</b>
+              </a>
+            </span>
+            <span>
+              <p>
+                This is my portfolio page source code! This was an extremely fun
+                project. It helps me showcase my journey and everything in
+                between! Thanks for taking your time in me.
+              </p>
+            </span>
+          </div>
+        </div>
+        <div className={portfolioStyles.projectCard}>
+          <div className={portfolioStyles.card}>
+            <a
               href="https://codepen.io/hermetheus/pen/rqGxRM"
               target="_blank"
               rel="noopener noreferrer"
@@ -101,6 +136,17 @@ export const query = graphql`
     ImageTwo: file(relativePath: { eq: "images/image2.png" }) {
       childImageSharp {
         fluid(maxWidth: 1500) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          sizes
+        }
+      }
+    }
+    ImageThree: file(relativePath: { eq: "images/image3.PNG" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000, maxHeight: 1150) {
           base64
           aspectRatio
           src
