@@ -1,21 +1,26 @@
 .card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  flex-direction: row;
+  flex-wrap: row wrap;
+  align-content: center;
+  justify-content: center;
 }
 
 .firstcard {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  max-width: 1250px;
+  flex-basis: 75%;
   padding: 1.5rem;
-  justify-content: space-between;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   background-color: #ffffff;
   box-shadow: 0 0 10px 10px #777777;
-  max-width: 750px;
-  height: 75;
 }
 
 @-webkit-keyframes appear {
@@ -43,27 +48,32 @@
 
 .Img {
   display: flex;
-  flex-direction: row-reverse;
   -webkit-animation: appear 1s ease 0s 1 normal;
   -moz-animation: appear 1s ease 0s 1 normal;
   -ms-animation: appear 1s ease 0s 1 normal;
   animation: appear 1s ease 0s 1 normal;
   animation-fill-mode: both;
-  padding: 20px;
-  margin-right: 40px;
-  position: relative;
-  left: 15px;
+  width: 350px;
+  height: 350px;
 }
 .title {
-  max-width: 440px;
-  position: relative;
+  display: flex;
+  margin: auto;
+  justify-content: center;
 }
 
 .secondcard {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  flex-basis: 75%;
   padding: 1.5rem;
   margin-top: 50px;
   justify-content: center;
+  max-width: 1250px;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -90,4 +100,26 @@
 .button:active {
   position: relative;
   top: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .firstcard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    max-width: 1250px;
+    flex-basis: 75%;
+    padding: 1.5rem;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 10px #777777;
+  }
+  .title {
+    padding-top: 25px;
+  }
 }
