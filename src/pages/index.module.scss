@@ -1,9 +1,21 @@
 .card {
   display: flex;
-  flex-direction: row;
-  flex-wrap: row wrap;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #ffffff;
+  transition: color 400ms ease-in;
+}
+a:hover {
+  color: #fb9300;
+  transition: color 400ms ease-out;
+}
+a:active {
+  color: #fb9300;
 }
 
 .firstcard {
@@ -13,14 +25,14 @@
   text-align: center;
   align-items: center;
   align-content: center;
-  max-width: 1250px;
+  width: 65%;
   flex-basis: 75%;
   padding: 1.5rem;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   background-color: #ffffff;
-  box-shadow: 0 0 10px 10px #006aad;
+  box-shadow: 0 0 6.5px 6.5px #006aad;
 }
 
 @-webkit-keyframes appear {
@@ -58,8 +70,8 @@
 }
 .title {
   display: flex;
-  margin: auto;
-  justify-content: center;
+  justify-content: space-around;
+  padding-left: 45px;
 }
 
 .secondcard {
@@ -70,15 +82,14 @@
   align-items: center;
   align-content: center;
   flex-basis: 75%;
+  max-width: 65%;
   padding: 1.5rem;
   margin-top: 50px;
-  justify-content: center;
-  max-width: 1250px;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   background-color: #ffffff;
-  box-shadow: 0 0 10px 10px #006aad;
+  box-shadow: 0 0 6.5px 6.5px #006aad;
 }
 .button {
   background-color: #fb9300;
@@ -102,24 +113,52 @@
   top: 1px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
+  .title {
+    font-size: 25px;
+    padding-top: 25px;
+  }
+  .Img {
+    display: flex;
+    -webkit-animation: appear 1s ease 0s 1 normal;
+    -moz-animation: appear 1s ease 0s 1 normal;
+    -ms-animation: appear 1s ease 0s 1 normal;
+    animation: appear 1s ease 0s 1 normal;
+    animation-fill-mode: both;
+    width: 200px;
+    height: 200px;
+  }
   .firstcard {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    flex-basis: 100%;
+    padding: 1.5rem;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 0 6.5px 6.5px #006aad;
+  }
+  .secondcard {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     align-items: center;
     align-content: center;
-    max-width: 1250px;
     flex-basis: 75%;
+    max-width: 100%;
     padding: 1.5rem;
+    margin-top: 50px;
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     background-color: #ffffff;
-    box-shadow: 0 0 10px 10px #006aad;
-  }
-  .title {
-    padding-top: 25px;
+    box-shadow: 0 0 6.5px 6.5px #006aad;
   }
 }

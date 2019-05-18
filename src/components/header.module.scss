@@ -1,96 +1,40 @@
-.header {
-  width: 100%;
-  height: 100px;
-  padding: 0.75rem;
-  background-color: #006aad;
-  -webkit-box-shadow: 0 8px 6px -6px #fb9300;
-  -moz-box-shadow: 0 8px 6px -6px #fb9300;
-  box-shadow: 0 8px 6px -6px #fb9300;
-  position: fixed;
-  top: 0;
-  z-index: 710;
-  .logo {
-    width: auto;
-    height: 75px;
-  }
-  .logo svg {
-    width: auto;
-    height: 75px;
-  }
-  .logo svg path {
-    fill: #ffffff;
-    transition: fill 400ms ease-in;
-  }
-
-  .logo:hover svg path {
-    fill: #fb9300;
-    transition: fill 400ms ease-out;
-  }
+.navbar {
+  transition: top 0.5s;
 }
 
-.ul {
-  list-style-type: none;
+.active {
+  text-decoration: underline;
 }
 
-.navigation {
-  color: #ffffff;
+.navlink {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.navbarbrand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.logo {
   width: auto;
-  height: 30px;
-  border-bottom: 0;
-  transition: color 400ms ease-in;
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  float: right;
-  a {
-    color: #ffffff;
-    border-bottom: 0;
-    transition: color 400ms ease-in;
-    display: inline-block;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #fb9300;
-    border-bottom: 0;
-    transition: color 400ms ease-out;
-  }
-  &.active {
-    color: #fb9300;
-  }
-  .li {
-    display: inline;
-    text-transform: uppercase;
-    margin: 0 1rem;
-    font-weight: 350;
-  }
+  height: 75px;
+}
+.logo svg {
+  width: auto;
+  height: 75px;
+}
+.logo svg path {
+  fill: #ffffff;
+  transition: fill 400ms ease-in;
 }
 
-@media screen and (max-width: 600px) {
-  .header {
-    background-color: #006aad;
-    position: fixed;
-    -webkit-box-shadow: 0 4px 3px -3px #fb9300;
-    -moz-box-shadow: 0 4px 3px -3px #fb9300;
-    box-shadow: 0 4px 3px -3px #fb9300;
-    height: 70px;
-    top: 0;
-    position: relative;
-    .logo svg {
-      width: auto;
-      height: 35px;
-    }
-    .navigation {
-      width: auto;
-      height: 30px;
-      border-bottom: 0;
-      transition: color 400ms ease-in;
-      font-size: 0.75rem;
-      float: right;
-      .li {
-        display: inline;
-        text-transform: uppercase;
-        margin: 0 0.5rem;
-        font-weight: 350;
-      }
-    }
-  }
+.logo:hover svg path {
+  fill: #fb9300;
+  transition: fill 400ms ease-out;
 }

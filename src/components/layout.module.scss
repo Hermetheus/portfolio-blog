@@ -2,6 +2,18 @@
   padding: 150px;
 }
 
+a {
+  color: #ffffff;
+  transition: color 400ms ease-in;
+}
+a:hover {
+  color: #fb9300;
+  transition: color 400ms ease-out;
+}
+a:active {
+  color: #fb9300;
+}
+
 @media screen and (max-width: 600px) {
   .content {
     width: 100%;

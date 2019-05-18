@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('C:/Users/ALaptop/gatsby-portfolio/node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
-      options: {"plugins":[],"trackingId":"UA-140164304-1","head":false,"anonymize":true,"respectDNT":true,"exclude":["/preview/**","/do-not-track/me/too/"],"sampleRate":5,"siteSpeedSampleRate":10,"cookieDomain":"www.allanmolson.com"},
+      options: {"plugins":[],"trackingId":"UA-140164304-1","head":true},
     },{
       plugin: require('C:/Users/ALaptop/gatsby-portfolio/node_modules/gatsby-plugin-catch-links/gatsby-browser.js'),
       options: {"plugins":[]},

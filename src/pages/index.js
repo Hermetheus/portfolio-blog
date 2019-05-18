@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
@@ -22,8 +23,7 @@ const IndexPage = props => {
             </h1>
           </div>
         </div>
-      </div>
-      <div className={indexStyles.card}>
+
         <div className={indexStyles.secondcard}>
           <p>
             I am currently a <b>lucky man</b> to have a amazing woman and
