@@ -124,7 +124,7 @@ export const query = graphql`
   query {
     ImageOne: file(relativePath: { eq: "images/image1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 350) {
+        fluid(maxWidth: 1000) {
           base64
           aspectRatio
           src
@@ -135,7 +135,7 @@ export const query = graphql`
     }
     ImageTwo: file(relativePath: { eq: "images/image2.png" }) {
       childImageSharp {
-        fluid(maxWidth: 350) {
+        fluid(maxWidth: 1000) {
           base64
           aspectRatio
           src
@@ -146,7 +146,7 @@ export const query = graphql`
     }
     ImageThree: file(relativePath: { eq: "images/image3.PNG" }) {
       childImageSharp {
-        fluid(maxWidth: 350, maxHeight: 350) {
+        fluid(maxWidth: 750) {
           base64
           aspectRatio
           src

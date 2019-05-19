@@ -92,7 +92,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div style={{ fontSize: "1.2rem" }}>
+      <div className={headerStyles.border} style={{ fontSize: "1.2rem" }}>
         <Navbar
           id="navbar"
           style={{ backgroundColor: "#006abb" }}

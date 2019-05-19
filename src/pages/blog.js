@@ -24,7 +24,19 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <h1>My Blog</h1>
+      <div className={blogStyles.contactMe}>
+        <div className={blogStyles.secondcard}>
+          <h1>My Blog</h1>
+          <p>
+            This is a home for all my journies. This includes developing and all
+            of the stuff in between! If you ever have any questions or just feel
+            like talking.
+          </p>
+          <a href="mailto:allanmolson@gmail.com">
+            <button className={blogStyles.button}>Contact Me</button>
+          </a>
+        </div>
+      </div>
       <ol className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map(edge => {
           return (

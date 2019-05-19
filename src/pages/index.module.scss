@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+p {
+  color: black;
+}
+
 a {
   color: #ffffff;
   transition: color 400ms ease-in;
@@ -59,19 +63,43 @@ a:active {
 }
 
 .Img {
+  -webkit-animation: appear 1s ease 0s 1 normal;
+  -moz-animation: appear 1s ease 0s 1 normal;
+  -ms-animation: appear 1s ease 0s 1 normal;
+  animation: appear 1s ease 0s 1 normal;
+  animation-fill-mode: both;
+  width: 100%;
+  height: 100%;
+}
+
+.Img1 {
   display: flex;
   -webkit-animation: appear 1s ease 0s 1 normal;
   -moz-animation: appear 1s ease 0s 1 normal;
   -ms-animation: appear 1s ease 0s 1 normal;
   animation: appear 1s ease 0s 1 normal;
   animation-fill-mode: both;
-  width: 350px;
-  height: 350px;
+  width: 600px;
+  height: auto;
 }
 .title {
   display: flex;
   justify-content: space-around;
   padding-left: 45px;
+}
+
+.contactMe {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fb9300;
+  width: 100%;
+  margin-top: 50px;
+  transform: skewY(-1.25deg);
+  transform-origin: 100%;
 }
 
 .secondcard {
@@ -84,7 +112,8 @@ a:active {
   flex-basis: 75%;
   max-width: 65%;
   padding: 1.5rem;
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -104,6 +133,7 @@ a:active {
   padding: 9px 23px;
   text-decoration: none;
   align-content: center;
+  margin-top: 5px;
 }
 .button:hover {
   background-color: #006aad;
@@ -113,9 +143,23 @@ a:active {
   top: 1px;
 }
 
+.aboutMe {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fb9300;
+  width: 100%;
+  margin-top: 100px;
+  transform: skewY(1.25deg);
+  transform-origin: 100%;
+}
+
 @media screen and (max-width: 769px) {
   .title {
-    font-size: 25px;
+    font-size: 45px;
     padding-top: 25px;
   }
   .Img {
@@ -125,8 +169,18 @@ a:active {
     -ms-animation: appear 1s ease 0s 1 normal;
     animation: appear 1s ease 0s 1 normal;
     animation-fill-mode: both;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+  }
+  .Img1 {
+    display: flex;
+    -webkit-animation: appear 1s ease 0s 1 normal;
+    -moz-animation: appear 1s ease 0s 1 normal;
+    -ms-animation: appear 1s ease 0s 1 normal;
+    animation: appear 1s ease 0s 1 normal;
+    animation-fill-mode: both;
+    width: 100%;
+    height: 100%;
   }
   .firstcard {
     display: flex;
@@ -135,7 +189,8 @@ a:active {
     text-align: center;
     align-items: center;
     align-content: center;
-    width: 100%;
+    width: 95%;
+    height: 350px;
     flex-basis: 100%;
     padding: 1.5rem;
     border-radius: 50px;

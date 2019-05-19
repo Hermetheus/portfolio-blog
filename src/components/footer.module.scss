@@ -5,9 +5,6 @@
   background-color: #006aad;
   color: white;
   text-align: center;
-  -webkit-box-shadow: 0 -10px 6px -6px #fb9300;
-  -moz-box-shadow: 0 -10px 6px -6px #fb9300;
-  box-shadow: 0 -10px 6px -6px #fb9300;
 }
 .logo {
   width: auto;
@@ -51,14 +48,4 @@ a:hover {
 }
 .data.site.siteMetadata.author {
   color: black;
-}
-
-@media screen and (max-width: 600px) {
-  .footer {
-    background-color: #006aad;
-    position: absolute;
-    -webkit-box-shadow: 0 4px 3px -3px #fb9300;
-    -moz-box-shadow: 0 4px 3px -3px #fb9300;
-    box-shadow: 0 -4px 3px -3px #fb9300;
-  }
 }
