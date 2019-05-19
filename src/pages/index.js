@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import Head from "../components/head"

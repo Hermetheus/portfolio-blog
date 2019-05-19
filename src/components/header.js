@@ -95,6 +95,7 @@ class Header extends Component {
       <div className={headerStyles.border} style={{ fontSize: "1.2rem" }}>
         <Navbar
           id="navbar"
+          light
           style={{ backgroundColor: "#006abb" }}
           className={headerStyles.navbar}
           expand="md"
@@ -157,11 +158,7 @@ class Header extends Component {
               onClick={this.toggle}
             />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav
-                className="ml-auto"
-                style={{ backgroundColor: "#006abb" }}
-                navbar
-              >
+              <Nav className="ml-auto" navbar>
                 <ListLink
                   exact={true}
                   route={appRoutes.home}
