@@ -26,7 +26,7 @@ const IndexPage = props => {
               daughter, that is extremely self-motivated to learn how to perfect
               my code and create programs that will hopefully help future
               generations to come. I am extremely passionate about becoming a
-              Full-Stack Developer someday and am open to any opportunity that
+              Full-Stack Developer someday and I am open to any opportunity that
               comes my way. If you'd like to get in touch, please get in touch!
             </p>
             <a href="mailto:allanmolson@gmail.com">
@@ -37,11 +37,10 @@ const IndexPage = props => {
         <div className={indexStyles.aboutMe}>
           <div className={indexStyles.secondcard}>
             <p>
-              I started my development journey August 26, 2018. There have been
+              I started my developing journey August 26, 2018. There have been
               moments that I've struggled and moments that I've triumphed like
-              all developers out there. This journey has taken me many of
-              places, but not the place I've always wanted to be in my life. At
-              the young age of 29, I decided now is the time.
+              all developers out there. At the young age of 29, I decided now is
+              the time to better myself and do what I've always wanted to do.
               <br />
               My wife helped push me into this direction and I am grateful to
               her, I found a website any true beginner should use to learn.

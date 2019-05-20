@@ -1,6 +1,7 @@
 ---
 title: "The Great Gatsby-JS"
 date: "2019-04-24"
+featuredImage: "./learn.jpg"
 ---
 
 I'm building my portfolio in The Great Gatsby-JS
