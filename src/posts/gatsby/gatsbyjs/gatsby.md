@@ -1,6 +1,7 @@
 ---
 title: "The Great Gatsby-JS"
 date: "2019-04-24"
+bio: "In this article I talk about how I learned how to make a site using GatsbyJS and all the wonders of a static website"
 featuredImage: "./learn.jpg"
 ---
 

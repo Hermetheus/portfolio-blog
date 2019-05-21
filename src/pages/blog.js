@@ -1,4 +1,5 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import React from "react"
 import Layout from "../components/main"
 import blogStyles from "./blog.module.scss"
@@ -12,6 +13,7 @@ const BlogPage = () => {
             frontmatter {
               title
               date
+              bio
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 630) {
@@ -48,7 +50,7 @@ const BlogPage = () => {
           </a>
         </div>
       </div>
-      <ol className={blogStyles.posts}>
+      <div className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map(edge => {
           return (
             <div className={blogStyles.border}>
@@ -56,12 +58,19 @@ const BlogPage = () => {
                 <Link to={`/blog/${edge.node.fields.slug}`}>
                   <h2>{edge.node.frontmatter.title}</h2>
                   <p>{edge.node.frontmatter.date}</p>
+                  <Img
+                    className={blogStyles.Img}
+                    fluid={
+                      edge.node.frontmatter.featuredImage.childImageSharp.fluid
+                    }
+                  />
+                  <p>{edge.node.frontmatter.bio}</p>
                 </Link>
               </li>
             </div>
           )
         })}
-      </ol>
+      </div>
     </Layout>
   )
 }
