@@ -164,7 +164,7 @@ class Header extends Component {
                   route={appRoutes.home}
                   routeName={"Home"}
                 />
-                <ListLink route={appRoutes.about} routeName={"About"} />
+                <ListLink route={appRoutes.resume} routeName={"Resume"} />
                 <ListLink route={appRoutes.blog} routeName={"Blog"} />
                 <ListLink route={appRoutes.portfolio} routeName={"Portfolio"} />
               </Nav>

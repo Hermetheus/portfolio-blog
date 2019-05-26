@@ -1,6 +1,6 @@
 export default {
   home: "/",
-  about: "/about/",
+  resume: "/resume/",
   blog: "/blog/",
   portfolio: "/portfolio/",
   notfound: "/404/",
