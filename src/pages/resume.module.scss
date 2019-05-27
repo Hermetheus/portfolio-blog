@@ -1,5 +1,7 @@
 .background {
   background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .border {
@@ -24,7 +26,7 @@
 
 .pdf {
   float: right;
-  _display: inline;
+  display: inline;
   margin-top: 2rem;
 }
 
@@ -37,6 +39,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  width: 50px;
+  height: 50px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   transition: -webkit-transform 0.25s ease-out;
@@ -52,7 +56,7 @@
 
 .experience {
   float: left;
-  _display: inline;
+  display: inline;
   width: 100%;
 }
 
@@ -66,6 +70,22 @@
 
 .design {
   float: right;
-  _display: inline;
+  display: inline;
   width: 100%;
+}
+
+.mt2 {
+  margin-top: 0.5rem;
+}
+
+.mt4 {
+  margin-top: 2rem;
+}
+
+.mt5 {
+  margin-top: 4rem;
+}
+
+.a {
+  color: #357edd;
 }

@@ -1,10 +1,11 @@
 import React from "react"
+import Layout from "../components/main"
 import resumeStyles from "./resume.module.scss"
 
 const ResumePage = () => {
   return (
     <Layout>
-      <body className={resumeStyles.background}>
+      <div className={resumeStyles.background}>
         <div className={resumeStyles.border}>
           <div className={resumeStyles.header}>
             <div className={resumeStyles.pdf}>
@@ -15,6 +16,7 @@ const ResumePage = () => {
             <h1>Allan Wakefield-Olson</h1>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.allanmolson.com"
               className={resumeStyles.hrefStyles}
             >
@@ -27,6 +29,7 @@ const ResumePage = () => {
                 <h3>E-Commerce Website</h3>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.minnitravelers.com"
                   className={resumeStyles.hrefStyles}
                 >
@@ -39,6 +42,7 @@ const ResumePage = () => {
                 <a
                   target="_blank"
                   href="https://www.allanmolson.com"
+                  rel="noopener noreferrer"
                   className={resumeStyles.hrefStyles}
                 >
                   My Personal Portfolio - May 2019 - Present
@@ -48,6 +52,7 @@ const ResumePage = () => {
                 <a
                   target="_blank"
                   href="https://github.com/Hermetheus/portfolio-blog"
+                  rel="noopener noreferrer"
                   className={resumeStyles.hrefStyles}
                 >
                   Source Code Here
@@ -61,6 +66,7 @@ const ResumePage = () => {
                 <a
                   className={resumeStyles.hrefStyles}
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.freecodecamp.org/allanmolson"
                 >
                   freeCodeCamp - August 2018-November 2018
@@ -71,6 +77,7 @@ const ResumePage = () => {
                   <a
                     href="https://www.freecodecamp.org/certification/allanmolson/responsive-web-design"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Responsive Web Design Certificate
                   </a>
@@ -79,6 +86,7 @@ const ResumePage = () => {
                   <a
                     href="https://www.freecodecamp.org/certification/allanmolson/javascript-algorithms-and-data-structures"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Javascript Algorithms & Data Structures Certificate
                   </a>
@@ -87,6 +95,7 @@ const ResumePage = () => {
                   <a
                     href="https://www.freecodecamp.org/certification/allanmolson/front-end-libraries"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Front End Libraries Certificate
                   </a>
@@ -96,91 +105,83 @@ const ResumePage = () => {
               <ul>
                 <li>Reddit</li>
                 <li>
-                  <a href="www.github.com/hermetheus">Github</a>
+                  <a
+                    href="www.github.com/hermetheus"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </a>
                 </li>
               </ul>
             </div>
             <div className={resumeStyles.design}>
               <h4>DESIGN SKILLS</h4>
-              <ul class="mt2" id="skills">
+              <ul className={resumeStyles.mt2} id="skills">
                 <li>UI/UX</li>
                 <li>Design Research</li>
                 <li>Grid & Layout</li>
               </ul>
 
-              <h4 class="mt5">TOOLS</h4>
-              <div class="mt2" id="design-tools" />
+              <h4 className={resumeStyles.mt5}>TOOLS</h4>
+              <div className={resumeStyles.mt2} id="design-tools" />
               <img
                 className={resumeStyles.grow}
-                style="width: 50px; height: 50px;"
-                src="images/photoshop.svg"
+                src="../images/photoshop.svg"
               />
               <span>Photoshop</span>
-              <img
-                className={resumeStyles.grow}
-                style="width: 50px; height: 50px;"
-                src="images/github.svg"
-              />
+              <img className={resumeStyles.grow} src="../images/github.svg" />
               <span>
-                <a href="https://www.github.com/hermetheus" target="_blank">
+                <a
+                  href="https://www.github.com/hermetheus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Github
                 </a>
               </span>
               <span>
-                <img
-                  className={resumeStyles.grow}
-                  style="width: 50px; height: 50px;"
-                  src="images/vscode.svg"
-                />
+                <img className={resumeStyles.grow} src="../images/vscode.svg" />
                 VsCode
               </span>
-              <h4 class="mt5">DEVELOPMENT SKILLS</h4>
-              <div class="mt4" id="development-tools">
+              <h4 className={resumeStyles.mt5}>DEVELOPMENT SKILLS</h4>
+              <div className={resumeStyles.mt4} id="development-tools">
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    style="width: 50px; height: 50px;"
-                    src="images/html5.svg"
+                    src="../images/html5.svg"
                   />
                   HTML5
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    style="width: 50px; height: 50px;"
-                    src="images/react.svg"
+                    src="../images/react.svg"
                   />
                   React
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    style="width: 50px; height: 50px;"
-                    src="images/gatsby.svg"
+                    src="../images/gatsby.svg"
                   />
                   GatsbyJS
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    style="width: 50px; height: 50px;"
-                    src="images/javascript.svg"
+                    src="../images/javascript.svg"
                   />
                   Javascript
                 </span>
                 <span>
-                  <img
-                    className={resumeStyles.grow}
-                    style="width: 50px; height: 50px;"
-                    src="images/css3.svg"
-                  />
+                  <img className={resumeStyles.grow} src="../images/css3.svg" />
                   CSS3
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    style="width: 50px; height: 50px;"
-                    src="images/mysql.svg"
+                    src="../images/mysql.svg"
                   />
                   MySql
                 </span>
@@ -188,7 +189,7 @@ const ResumePage = () => {
             </div>
           </div>
         </div>
-      </body>
+      </div>
     </Layout>
   )
 }
