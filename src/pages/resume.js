@@ -1,5 +1,16 @@
 import React from "react"
 import Layout from "../components/main"
+import cssSVG from "../images/css3.svg"
+import freeCodeCampSVG from "../images/freecodecamp.svg"
+import gatsbySVG from "../images/gatsby.svg"
+import githubSVG from "../images/github.svg"
+import htmlSVG from "../images/html5.svg"
+import javascriptSVG from "../images/javascript.svg"
+import mysqlSVG from "../images/mysql.svg"
+import npmSVG from "../images/npm.svg"
+import photoshopSVG from "../images/photoshop.svg"
+import reactSVG from "../images/react.svg"
+import vscodeSVG from "../images/vscode.svg"
 import resumeStyles from "./resume.module.scss"
 
 const ResumePage = () => {
@@ -9,11 +20,20 @@ const ResumePage = () => {
         <div className={resumeStyles.border}>
           <div className={resumeStyles.header}>
             <div className={resumeStyles.pdf}>
-              <a href="https://www.allanmolson.com" download="" class="b">
+              <a
+                href="https://www.allanmolson.com"
+                download=""
+                className={resumeStyles.hrefStyles}
+              >
                 Download PDF
               </a>
             </div>
-            <h1>Allan Wakefield-Olson</h1>
+            <h1 className={resumeStyles.h1}>Allan Wakefield-Olson</h1>
+            <img
+              src={mysqlSVG}
+              className={resumeStyles.grow}
+              alt="Resume Photo"
+            />
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -22,7 +42,12 @@ const ResumePage = () => {
             >
               Open Portfolio
             </a>
-            <div id="about" className={resumeStyles.about} />
+            <div id="about" className={resumeStyles.about}>
+              Hi, I'm Allan. A self taught highly motivated developer. I have a
+              primary focus on Front-End, UI/UX and customer experience
+              develpment. However I am extremely interested in learning about
+              the back-end developing as well.
+            </div>
             <div className={resumeStyles.experience}>
               <h4>EXPERIENCE</h4>
               <div id="workExperience">
@@ -78,6 +103,7 @@ const ResumePage = () => {
                     href="https://www.freecodecamp.org/certification/allanmolson/responsive-web-design"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className={resumeStyles.educationStyles}
                   >
                     Responsive Web Design Certificate
                   </a>
@@ -87,6 +113,7 @@ const ResumePage = () => {
                     href="https://www.freecodecamp.org/certification/allanmolson/javascript-algorithms-and-data-structures"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className={resumeStyles.educationStyles}
                   >
                     Javascript Algorithms & Data Structures Certificate
                   </a>
@@ -96,12 +123,13 @@ const ResumePage = () => {
                     href="https://www.freecodecamp.org/certification/allanmolson/front-end-libraries"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className={resumeStyles.educationStyles}
                   >
                     Front End Libraries Certificate
                   </a>
                 </li>
               </ul>
-              Additonal Sources
+              Additonal Resources
               <ul>
                 <li>Reddit</li>
                 <li>
@@ -109,6 +137,7 @@ const ResumePage = () => {
                     href="www.github.com/hermetheus"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className={resumeStyles.educationStyles}
                   >
                     Github
                   </a>
@@ -124,64 +153,91 @@ const ResumePage = () => {
               </ul>
 
               <h4 className={resumeStyles.mt5}>TOOLS</h4>
-              <div className={resumeStyles.mt2} id="design-tools" />
-              <img
-                className={resumeStyles.grow}
-                src="../images/photoshop.svg"
-              />
-              <span>Photoshop</span>
-              <img className={resumeStyles.grow} src="../images/github.svg" />
-              <span>
-                <a
-                  href="https://www.github.com/hermetheus"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Github
-                </a>
-              </span>
-              <span>
-                <img className={resumeStyles.grow} src="../images/vscode.svg" />
-                VsCode
-              </span>
-              <h4 className={resumeStyles.mt5}>DEVELOPMENT SKILLS</h4>
-              <div className={resumeStyles.mt4} id="development-tools">
+              <div className={resumeStyles.designtools}>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    src="../images/html5.svg"
+                    src={photoshopSVG}
+                    alt="Photoshop"
                   />
+                  Photoshop
+                </span>
+                <span>
+                  <img
+                    className={resumeStyles.grow}
+                    alt="Github"
+                    src={githubSVG}
+                  />
+
+                  <a
+                    href="https://www.github.com/hermetheus"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={resumeStyles.educationStyles}
+                  >
+                    Github
+                  </a>
+                </span>
+                <span>
+                  <img
+                    className={resumeStyles.grow}
+                    alt="VsCode"
+                    src={vscodeSVG}
+                  />
+                  VsCode
+                </span>
+                <span>
+                  <img className={resumeStyles.grow} alt="npm" src={npmSVG} />
+                  NPM
+                </span>
+                <span>
+                  <img
+                    className={resumeStyles.grow}
+                    alt="freeCodeCamp"
+                    src={freeCodeCampSVG}
+                  />
+                  freeCodeCamp
+                </span>
+              </div>
+              <h4 className={resumeStyles.mt5}>DEVELOPMENT SKILLS</h4>
+              <div className={resumeStyles.designtools}>
+                <span>
+                  <img className={resumeStyles.grow} alt="HTML" src={htmlSVG} />
                   HTML5
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    src="../images/react.svg"
+                    alt="React"
+                    src={reactSVG}
                   />
                   React
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    src="../images/gatsby.svg"
+                    alt="GatsbyJS"
+                    src={gatsbySVG}
                   />
                   GatsbyJS
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    src="../images/javascript.svg"
+                    alt="Javascript"
+                    src={javascriptSVG}
                   />
                   Javascript
                 </span>
                 <span>
-                  <img className={resumeStyles.grow} src="../images/css3.svg" />
+                  <img className={resumeStyles.grow} alt="CSS" src={cssSVG} />
                   CSS3
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    src="../images/mysql.svg"
+                    alt="MySQL"
+                    src={mysqlSVG}
                   />
                   MySql
                 </span>

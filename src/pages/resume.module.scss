@@ -11,8 +11,8 @@
   background-color: #fff;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-right: auto;
@@ -24,15 +24,19 @@
   width: 100%;
 }
 
+.h1 {
+  float: left;
+}
+
 .pdf {
   float: right;
-  display: inline;
   margin-top: 2rem;
 }
 
 .hrefStyles {
   display: block;
   color: #357edd;
+  text-decoration: none;
 }
 
 .grow {
@@ -41,11 +45,10 @@
   backface-visibility: hidden;
   width: 50px;
   height: 50px;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.25);
+  }
 }
 
 .about {
@@ -56,12 +59,17 @@
 
 .experience {
   float: left;
-  display: inline;
-  width: 100%;
+  width: 50%;
 }
 
 .education {
   margin-top: 4rem;
+}
+
+.educationStyles {
+  display: block;
+  color: black;
+  text-decoration: none;
 }
 
 .myeducation {
@@ -70,14 +78,14 @@
 
 .design {
   float: right;
-  display: inline;
-  width: 100%;
+  width: 50%;
 }
 
-.mt2 {
-  margin-top: 0.5rem;
+.designtools {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
 }
-
 .mt4 {
   margin-top: 2rem;
 }
@@ -88,4 +96,47 @@
 
 .a {
   color: #357edd;
+}
+
+@media screen and (max-width: 800px) {
+  .design {
+    float: right;
+    width: 100%;
+  }
+  .experience {
+    float: left;
+    width: 100%;
+  }
+  .designtools {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .grow {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .border {
+    border-radius: 0.25rem;
+    display: block;
+    max-width: 64rem;
+    background-color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
