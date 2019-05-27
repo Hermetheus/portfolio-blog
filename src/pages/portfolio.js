@@ -7,7 +7,9 @@ import portfolioStyles from "./portfolio.module.scss"
 const PortfolioPage = props => {
   return (
     <Layout>
-      <h1>My Projects</h1>
+      <div className={portfolioStyles.padding}>
+        <h1>My Projects</h1>
+      </div>
       <div className={portfolioStyles.projectBlocks}>
         <div className={portfolioStyles.projectCard}>
           <div className={portfolioStyles.card}>

@@ -1,6 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import footerStyles from "./footer.module.scss"
+import { graphql, Link, useStaticQuery } from "gatsby";
+import React from "react";
+import appRoutes from "../utils/appRoutes";
+import footerStyles from "./footer.module.scss";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -68,9 +69,8 @@ const Footer = () => {
             </g>
           </svg>
         </a>
-        <a
-          href="resume"
-          target="_blank"
+        <Link
+          to={appRoutes.resume}
           rel="noopener noreferrer"
           className={footerStyles.logo}
         >
@@ -134,7 +134,7 @@ const Footer = () => {
               </g>
             </g>
           </svg>
-        </a>
+        </Link>
         <a
           href="mailto:allanmolson@gmail.com"
           target="_blank"
