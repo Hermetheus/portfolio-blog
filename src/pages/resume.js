@@ -1,17 +1,17 @@
-import React from "react"
-import Layout from "../components/main"
-import cssSVG from "../images/css3.svg"
-import freeCodeCampSVG from "../images/freecodecamp.svg"
-import gatsbySVG from "../images/gatsby.svg"
-import githubSVG from "../images/github.svg"
-import htmlSVG from "../images/html5.svg"
-import javascriptSVG from "../images/javascript.svg"
-import mysqlSVG from "../images/mysql.svg"
-import npmSVG from "../images/npm.svg"
-import photoshopSVG from "../images/photoshop.svg"
-import reactSVG from "../images/react.svg"
-import vscodeSVG from "../images/vscode.svg"
-import resumeStyles from "./resume.module.scss"
+import React from "react";
+import Layout from "../components/main";
+import cssSVG from "../images/css3.svg";
+import freeCodeCampSVG from "../images/freecodecamp.svg";
+import gatsbySVG from "../images/gatsby.svg";
+import githubSVG from "../images/github.svg";
+import htmlSVG from "../images/html5.svg";
+import javascriptSVG from "../images/javascript.svg";
+import mysqlSVG from "../images/mysql.svg";
+import npmSVG from "../images/npm.svg";
+import photoshopSVG from "../images/photoshop.svg";
+import reactSVG from "../images/react.svg";
+import vscodeSVG from "../images/vscode.svg";
+import resumeStyles from "./resume.module.scss";
 
 const ResumePage = () => {
   return (
@@ -21,19 +21,15 @@ const ResumePage = () => {
           <div className={resumeStyles.header}>
             <div className={resumeStyles.pdf}>
               <a
-                href="https://www.allanmolson.com"
-                download=""
+                href="https://www.allanmolson.com/src/images/AllanWakefieldOlson.pdf"
+                download="AllanWakefieldOlson.pdf"
                 className={resumeStyles.hrefStyles}
               >
                 Download PDF
               </a>
             </div>
             <h1 className={resumeStyles.h1}>Allan Wakefield-Olson</h1>
-            <img
-              src={mysqlSVG}
-              className={resumeStyles.grow}
-              alt="Resume Photo"
-            />
+
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -58,7 +54,7 @@ const ResumePage = () => {
                   href="https://www.minnitravelers.com"
                   className={resumeStyles.hrefStyles}
                 >
-                  MinniTravelers - January 2019 - Present
+                  MinniTravelers - January 2019 - Present - Template Design
                 </a>
                 MinniTravelers is a startup company I am designing a e-commerce
                 site which is on the Content Manager Wordpress, with
