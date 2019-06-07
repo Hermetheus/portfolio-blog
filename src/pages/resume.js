@@ -1,5 +1,7 @@
 import React from "react"
 import Layout from "../components/main"
+import resume from "../images/AllanWakefieldOlson.pdf"
+import csharp from "../images/csharp.svg"
 import cssSVG from "../images/css3.svg"
 import freeCodeCampSVG from "../images/freecodecamp.svg"
 import gatsbySVG from "../images/gatsby.svg"
@@ -26,27 +28,24 @@ const ResumePage = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://www.allanmolson.com"
+                  href="www.allanmolson.com"
                   className={resumeStyles.hrefStyles}
                 >
                   Open Portfolio
                 </a>
               </div>
               <div className={resumeStyles.pdf}>
-                <a
-                  href="https://www.allanmolson.com/src/images/AllanWakefieldOlson.pdf"
-                  download="AllanWakefieldOlson.pdf"
-                  className={resumeStyles.hrefStyles}
-                >
+                <a className={resumeStyles.hrefStyles} href={resume} download>
                   Download PDF
                 </a>
               </div>
             </div>
             <div id="about" className={resumeStyles.about}>
               Hi, I'm Allan. A self taught highly motivated developer. I have a
-              primary focus on Front-End, UI/UX and customer experience
-              develpment. However I am extremely interested in learning about
-              the back-end developing as well.
+              primary focus on Front-End, UI/UX and with years of customer
+              service interactions. I have knowledge with many different
+              languages, however I primarily have utilized Javascript, HTML, and
+              CSS.
             </div>
             <div className={resumeStyles.experience}>
               <h4>EXPERIENCE</h4>
@@ -66,7 +65,7 @@ const ResumePage = () => {
                 <h3>Personal Portfolio</h3>
                 <a
                   target="_blank"
-                  href="https://www.allanmolson.com"
+                  href="www.allanmolson.com"
                   rel="noopener noreferrer"
                   className={resumeStyles.hrefStyles}
                 >
@@ -240,6 +239,14 @@ const ResumePage = () => {
                     src={mysqlSVG}
                   />
                   MySql
+                </span>
+                <span>
+                  <img
+                    className={resumeStyles.grow}
+                    alt="CSharp"
+                    src={csharp}
+                  />
+                  C#
                 </span>
               </div>
             </div>
