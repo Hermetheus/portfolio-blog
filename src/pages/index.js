@@ -36,15 +36,26 @@ const IndexPage = props => {
         </div>
         <div className={indexStyles.aboutMe}>
           <div className={indexStyles.secondcard}>
-            <p>
-              I started my developing journey August 26, 2018. There have been
-              moments that I've struggled and moments that I've triumphed like
-              all developers out there. At the young age of 29, I decided now is
-              the time to better myself and do what I've always wanted to do.
+            <ul>
+              I started my developing journey on August 26, 2018. There have
+              been moments that I've struggled and moments that I've triumphed
+              like all developers out there. At the young age of 29, I decided
+              now is the time to better myself and do what I've always wanted to
+              do.
+            </ul>
+            <ul>
+              <br />I am a completely self-taught developer. I work a full time
+              job and I am also full time dad and husband. I am extremely
+              interested in becoming a <b>Full Stack Developer</b>. The main
+              languages I have used include primarily Javascript, CSS, HTML,
+              MySQL and C#.
+            </ul>
+            <ul>
               <br />
-              My wife helped push me into this direction and I am grateful to
-              her, I found a website any true beginner should use to learn.
-            </p>
+              When I am not coding you can find me spending time with my
+              daughter and wife, teaching myself to become a better Developer,
+              and working on my house.
+            </ul>
             <a
               href="https://www.freecodecamp.org/allanmolson"
               target="_blank"

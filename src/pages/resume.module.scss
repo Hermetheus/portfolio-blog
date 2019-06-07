@@ -28,9 +28,11 @@
   float: left;
 }
 
-.pdf {
-  float: right;
-  margin-top: 2rem;
+.utils {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
 .hrefStyles {
@@ -54,7 +56,7 @@
 .about {
   width: 100%;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  padding-top: 35px;
 }
 
 .experience {
@@ -99,6 +101,74 @@
 }
 
 @media screen and (max-width: 800px) {
+  .utils {
+    display: block;
+  }
+
+  .portfolio {
+    float: left;
+  }
+
+  .pdf {
+    float: right;
+  }
+  .design {
+    float: right;
+    width: 100%;
+  }
+  .experience {
+    float: left;
+    width: 100%;
+  }
+  .designtools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .grow {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .border {
+    border-radius: 0.25rem;
+    display: block;
+    max-width: 64rem;
+    background-color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .utils {
+    display: block;
+  }
+  .about {
+    margin-top: 55px;
+  }
+  .portfolio {
+    float: left;
+  }
+
+  .pdf {
+    float: right;
+  }
   .design {
     float: right;
     width: 100%;

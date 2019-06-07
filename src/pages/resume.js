@@ -1,17 +1,17 @@
-import React from "react";
-import Layout from "../components/main";
-import cssSVG from "../images/css3.svg";
-import freeCodeCampSVG from "../images/freecodecamp.svg";
-import gatsbySVG from "../images/gatsby.svg";
-import githubSVG from "../images/github.svg";
-import htmlSVG from "../images/html5.svg";
-import javascriptSVG from "../images/javascript.svg";
-import mysqlSVG from "../images/mysql.svg";
-import npmSVG from "../images/npm.svg";
-import photoshopSVG from "../images/photoshop.svg";
-import reactSVG from "../images/react.svg";
-import vscodeSVG from "../images/vscode.svg";
-import resumeStyles from "./resume.module.scss";
+import React from "react"
+import Layout from "../components/main"
+import cssSVG from "../images/css3.svg"
+import freeCodeCampSVG from "../images/freecodecamp.svg"
+import gatsbySVG from "../images/gatsby.svg"
+import githubSVG from "../images/github.svg"
+import htmlSVG from "../images/html5.svg"
+import javascriptSVG from "../images/javascript.svg"
+import mysqlSVG from "../images/mysql.svg"
+import npmSVG from "../images/npm.svg"
+import photoshopSVG from "../images/photoshop.svg"
+import reactSVG from "../images/react.svg"
+import vscodeSVG from "../images/vscode.svg"
+import resumeStyles from "./resume.module.scss"
 
 const ResumePage = () => {
   return (
@@ -19,25 +19,29 @@ const ResumePage = () => {
       <div className={resumeStyles.background}>
         <div className={resumeStyles.border}>
           <div className={resumeStyles.header}>
-            <div className={resumeStyles.pdf}>
-              <a
-                href="https://www.allanmolson.com/src/images/AllanWakefieldOlson.pdf"
-                download="AllanWakefieldOlson.pdf"
-                className={resumeStyles.hrefStyles}
-              >
-                Download PDF
-              </a>
-            </div>
             <h1 className={resumeStyles.h1}>Allan Wakefield-Olson</h1>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.allanmolson.com"
-              className={resumeStyles.hrefStyles}
-            >
-              Open Portfolio
-            </a>
+            <div className={resumeStyles.utils}>
+              <div className={resumeStyles.portfolio}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.allanmolson.com"
+                  className={resumeStyles.hrefStyles}
+                >
+                  Open Portfolio
+                </a>
+              </div>
+              <div className={resumeStyles.pdf}>
+                <a
+                  href="https://www.allanmolson.com/src/images/AllanWakefieldOlson.pdf"
+                  download="AllanWakefieldOlson.pdf"
+                  className={resumeStyles.hrefStyles}
+                >
+                  Download PDF
+                </a>
+              </div>
+            </div>
             <div id="about" className={resumeStyles.about}>
               Hi, I'm Allan. A self taught highly motivated developer. I have a
               primary focus on Front-End, UI/UX and customer experience

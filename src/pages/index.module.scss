@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 p {
@@ -73,6 +74,10 @@ a:active {
   height: 100%;
 }
 
+.titlepicture {
+  padding: 25px;
+}
+
 .Img1 {
   display: flex;
   -webkit-animation: appear 1s ease 0s 1 normal;
@@ -85,8 +90,7 @@ a:active {
 }
 .title {
   display: flex;
-  justify-content: space-around;
-  padding-left: 45px;
+  justify-content: center;
 }
 
 .contactMe {
@@ -99,8 +103,6 @@ a:active {
   background-color: #fb9300;
   width: 100%;
   margin-top: 50px;
-  transform: skewY(-1.25deg);
-  transform-origin: 100%;
 }
 
 .secondcard {
@@ -154,11 +156,16 @@ a:active {
   background-color: #fb9300;
   width: 100%;
   margin-top: 100px;
-  transform: skewY(1.25deg);
-  transform-origin: 100%;
 }
 
 @media screen and (max-width: 769px) {
+  .titlepicture {
+    padding: 0;
+  }
+  .card {
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
   .title {
     font-size: 45px;
     padding-top: 25px;
