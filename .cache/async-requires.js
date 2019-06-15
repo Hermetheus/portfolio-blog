@@ -10,5 +10,3 @@ exports.components = {
   "component---src-pages-resume-js": () => import("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\pages\\resume.js" /* webpackChunkName: "component---src-pages-resume-js" */)
 }
 
-exports.data = () => import(/* webpackChunkName: "pages-manifest" */ "C:\\Users\\ALaptop\\gatsby-portfolio\\.cache\\data.json")
-

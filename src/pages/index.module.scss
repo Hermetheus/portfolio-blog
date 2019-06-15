@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 .card {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,7 @@
   align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
@@ -91,6 +94,7 @@ a:active {
 .title {
   display: flex;
   justify-content: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contactMe {
