@@ -19,7 +19,7 @@ const Footer = () => {
       <div>©2019 {data.site.siteMetadata.author}</div>
       <ul className={footerStyles.ul}>
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/in/allanmolson/"
           target="_blank"
           rel="noopener noreferrer"
           className={footerStyles.logo}
