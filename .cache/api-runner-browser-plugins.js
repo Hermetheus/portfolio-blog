@@ -7,4 +7,7 @@ module.exports = [{
     },{
       plugin: require('C:/Users/ALaptop/gatsby-portfolio/node_modules/gatsby-remark-images/gatsby-browser.js'),
       options: {"plugins":[],"maxWidth":750,"linkImagesToOriginal":false},
+    },{
+      plugin: require('C:/Users/ALaptop/gatsby-portfolio/node_modules/gatsby-plugin-offline/gatsby-browser.js'),
+      options: {"plugins":[]},
     }]

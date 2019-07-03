@@ -1,19 +1,19 @@
-import React from "react";
-import Layout from "../components/main";
-import resume from "../images/AllanWakefieldOlson.pdf";
-import csharp from "../images/csharp.svg";
-import cssSVG from "../images/css3.svg";
-import freeCodeCampSVG from "../images/freecodecamp.svg";
-import gatsbySVG from "../images/gatsby.svg";
-import githubSVG from "../images/github.svg";
-import htmlSVG from "../images/html5.svg";
-import javascriptSVG from "../images/javascript.svg";
-import mysqlSVG from "../images/mysql.svg";
-import npmSVG from "../images/npm.svg";
-import photoshopSVG from "../images/photoshop.svg";
-import reactSVG from "../images/react.svg";
-import vscodeSVG from "../images/vscode.svg";
-import resumeStyles from "./resume.module.scss";
+import React from "react"
+import Layout from "../components/main"
+import resume from "../images/AllanWakefieldOlson.pdf"
+import csharp from "../images/csharp.svg"
+import cssSVG from "../images/css3.svg"
+import freeCodeCampSVG from "../images/freecodecamp.svg"
+import gatsbySVG from "../images/gatsby.svg"
+import githubSVG from "../images/github.svg"
+import htmlSVG from "../images/html5.svg"
+import javascriptSVG from "../images/javascript.svg"
+import mysqlSVG from "../images/mysql.svg"
+import npmSVG from "../images/npm.svg"
+import photoshopSVG from "../images/photoshop.svg"
+import reactSVG from "../images/react.svg"
+import vscodeSVG from "../images/vscode.svg"
+import resumeStyles from "./resume.module.scss"
 
 const ResumePage = () => {
   return (

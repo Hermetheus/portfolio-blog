@@ -5,6 +5,7 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
+  "component---node-modules-gatsby-plugin-offline-app-shell-js": hot(preferDefault(require("C:\\Users\\ALaptop\\gatsby-portfolio\\node_modules\\gatsby-plugin-offline\\app-shell.js"))),
   "component---src-templates-blog-js": hot(preferDefault(require("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\templates\\blog.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\pages\\404.js"))),
   "component---src-pages-blog-js": hot(preferDefault(require("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\pages\\blog.js"))),

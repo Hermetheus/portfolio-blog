@@ -35,12 +35,14 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+node_modules
 
 # Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
 .npm
+
 
 # Optional eslint cache
 .eslintcache
@@ -67,3 +69,14 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules

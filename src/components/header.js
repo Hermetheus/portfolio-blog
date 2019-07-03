@@ -1,15 +1,8 @@
-import { Link } from "gatsby"
-import React, { Component } from "react"
-import {
-  Collapse,
-  Container,
-  Nav,
-  Navbar,
-  NavbarToggler,
-  NavItem,
-} from "reactstrap"
-import appRoutes from "../utils/appRoutes"
-import headerStyles from "./header.module.scss"
+import { Link } from "gatsby";
+import React, { Component } from "react";
+import { Collapse, Container, Nav, Navbar, NavbarToggler, NavItem } from "reactstrap";
+import appRoutes from "../utils/appRoutes";
+import headerStyles from "./header.module.scss";
 
 const isActive = ({ isCurrent }) => {
   return isCurrent ? { className: "active" } : null
