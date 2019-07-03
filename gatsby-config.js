@@ -56,6 +56,18 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Allan Wakefield-Olson`,
+        short_name: `AWO`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#FFFFFF`,
+        display: `standalone`,
+
+      },
+    },
     `gatsby-plugin-offline`,
   ],
 }
