@@ -6,7 +6,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('C:/Users/ALaptop/gatsby-portfolio/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Allan Wakefield-Olson","short_name":"AWO","start_url":"/","background_color":"#FFFFFF","theme_color":"#FFFFFF","display":"standalone"},
+      options: {"plugins":[],"name":"Allan Wakefield-Olson","short_name":"AWO","start_url":"/","background_color":"#FFFFFF","theme_color":"#FFFFFF","display":"standalone","icon":"src/images/sitelogo.png"},
     },{
       plugin: require('C:/Users/ALaptop/gatsby-portfolio/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
