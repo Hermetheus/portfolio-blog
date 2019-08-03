@@ -7,6 +7,7 @@
 
 .active {
   text-decoration: underline;
+  color: #006666;
 }
 
 .navlink {
@@ -38,14 +39,14 @@
 }
 
 .logo:hover svg path {
-  fill: #fb9300;
+  fill: #006666;
   transition: fill 400ms ease-out;
 }
 
 @media screen and (max-width: 600px) {
   .navbar {
-    -webkit-box-shadow: 0 4px 3px -3px #fb9300;
-    -moz-box-shadow: 0 4px 3px -3px #fb9300;
-    box-shadow: 0 -4px 3px -3px #fb9300;
+    -webkit-box-shadow: 0 4px 3px -3px #006666;
+    -moz-box-shadow: 0 4px 3px -3px #006666;
+    box-shadow: 0 -4px 3px -3px #006666;
   }
 }

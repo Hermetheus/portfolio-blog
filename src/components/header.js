@@ -1,17 +1,25 @@
-import { Link } from "gatsby";
-import React, { Component } from "react";
-import { Collapse, Container, Nav, Navbar, NavbarToggler, NavItem } from "reactstrap";
-import appRoutes from "../utils/appRoutes";
-import headerStyles from "./header.module.scss";
+import { Link } from "gatsby"
+import React, { Component } from "react"
+import {
+  Collapse,
+  Container,
+  Nav,
+  Navbar,
+  NavbarToggler,
+  NavItem,
+} from "reactstrap"
+import appRoutes from "../utils/appRoutes"
+import DarkModeToggle from "../utils/DarkMode/DarkModeToggle.js"
+import headerStyles from "./header.module.scss"
 
 const isActive = ({ isCurrent }) => {
-  return isCurrent ? { className: "active" } : null
+  return isCurrent ? { className: headerStyles.active } : null
 }
 
 const ExactNavLink = props => <Link getProps={isActive} {...props} />
 
 const isPartiallyActive = ({ isPartiallyCurrent }) => {
-  return isPartiallyCurrent ? { className: "active" } : null
+  return isPartiallyCurrent ? { className: headerStyles.active } : null
 }
 
 const PartialNavLink = props => <Link getProps={isPartiallyActive} {...props} />
@@ -89,7 +97,7 @@ class Header extends Component {
         <Navbar
           id="navbar"
           light
-          style={{ backgroundColor: "#006abb" }}
+          style={{ backgroundColor: "	#6b6b6b" }}
           className={headerStyles.navbar}
           expand="md"
           fixed="top"
@@ -160,6 +168,7 @@ class Header extends Component {
                 <ListLink route={appRoutes.resume} routeName={"Resume"} />
                 <ListLink route={appRoutes.blog} routeName={"Blog"} />
                 <ListLink route={appRoutes.portfolio} routeName={"Portfolio"} />
+                <DarkModeToggle />
               </Nav>
             </Collapse>
           </Container>

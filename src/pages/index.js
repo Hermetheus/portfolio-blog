@@ -1,10 +1,10 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import React from "react"
-import Head from "../components/head"
-import Layout from "../components/main"
-import indexStyles from "./index.module.scss"
+import "bootstrap/dist/css/bootstrap.min.css";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import Head from "../components/head";
+import Layout from "../components/main";
+import indexStyles from "./index.module.scss";
 
 const IndexPage = props => {
   return (

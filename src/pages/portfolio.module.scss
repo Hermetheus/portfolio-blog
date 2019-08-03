@@ -24,8 +24,8 @@
   justify-content: center;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
-  background-color: #ffffff;
-  box-shadow: 0 0 6.5px 6.5px #006aad;
+  background-color: #b7b7b7;
+  box-shadow: 0 0 6.5px 6.5px #6b6b6b;
   max-width: 400px;
   -webkit-animation: appear 1s ease 0s 1 normal;
   -moz-animation: appear 1s ease 0s 1 normal;
@@ -44,13 +44,11 @@ span {
   display: block;
   text-align: center;
   position: relative;
-  color: black;
 }
 
 .source {
   padding-left: 10px;
   text-decoration: none;
-  color: black;
 }
 
 /* Animations */
@@ -88,8 +86,8 @@ span {
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    background-color: #ffffff;
-    box-shadow: 0 0 6.5px 6.5px #006aad;
+    background-color: #b7b7b7;
+    box-shadow: 0 0 6.5px 6.5px #6b6b6b;
     max-width: 350px;
     -webkit-animation: appear 1s ease 0s 1 normal;
     -moz-animation: appear 1s ease 0s 1 normal;
