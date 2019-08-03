@@ -2,8 +2,8 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
-  "component---node-modules-gatsby-plugin-offline-app-shell-js": () => import("C:\\Users\\ALaptop\\gatsby-portfolio\\node_modules\\gatsby-plugin-offline\\app-shell.js" /* webpackChunkName: "component---node-modules-gatsby-plugin-offline-app-shell-js" */),
   "component---src-templates-blog-js": () => import("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\templates\\blog.js" /* webpackChunkName: "component---src-templates-blog-js" */),
+  "component---cache-dev-404-page-js": () => import("C:\\Users\\ALaptop\\gatsby-portfolio\\.cache\\dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\pages\\404.js" /* webpackChunkName: "component---src-pages-404-js" */),
   "component---src-pages-blog-js": () => import("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\pages\\blog.js" /* webpackChunkName: "component---src-pages-blog-js" */),
   "component---src-pages-index-js": () => import("C:\\Users\\ALaptop\\gatsby-portfolio\\src\\pages\\index.js" /* webpackChunkName: "component---src-pages-index-js" */),
