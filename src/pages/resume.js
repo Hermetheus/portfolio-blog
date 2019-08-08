@@ -83,7 +83,7 @@ const ResumePage = () => {
                 </a>
               </div>
               <h4 className={resumeStyles.education}>EDUCATION</h4>
-              <div class={resumeStyles.myeducation} id="education">
+              <div className={resumeStyles.myeducation} id="education">
                 My Education
               </div>
               <p>
