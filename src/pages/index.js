@@ -1,10 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
-import React from "react";
-import Head from "../components/head";
-import Layout from "../components/main";
-import indexStyles from "./index.module.scss";
+import "bootstrap/dist/css/bootstrap.min.css"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import React from "react"
+import Head from "../components/head"
+import Layout, { introduction } from "../components/main"
+import CursorImitator from "../utils/CursorImitator"
+import indexStyles from "./index.module.scss"
 
 const IndexPage = props => {
   return (
@@ -12,8 +13,7 @@ const IndexPage = props => {
       <Head />
       <div className={indexStyles.card}>
         <h1 className={indexStyles.title}>
-          Hello, I'm
-          <br /> Allan Wakefield-Olson
+          <CursorImitator content={introduction.tagline} />
         </h1>
         <Img
           className={indexStyles.Img1}
@@ -29,6 +29,7 @@ const IndexPage = props => {
               Full-Stack Developer someday and I am open to any opportunity that
               comes my way. If you'd like to get in touch, please get in touch!
             </p>
+            <CursorImitator content={introduction.description} />
             <a href="mailto:allanmolson@gmail.com">
               <button className={indexStyles.button}>Contact Me</button>
             </a>
