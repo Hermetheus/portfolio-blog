@@ -1,11 +1,11 @@
-import React from "react"
-import "../styles/index.scss"
-import Footer from "./footer"
-import Header from "./header"
-import layoutStyles from "./layout.module.scss"
+import React from "react";
+import "../styles/index.scss";
+import Footer from "./footer";
+import Header from "./header";
+import layoutStyles from "./layout.module.scss";
 
 export const introduction = {
-  tagline: ["Hello,", "I'm Allan Wakefield-Olson!"],
+  tagline: ["> -- Hello,", "I'm Allan Wakefield-Olson!"],
   description: [
     "> -- I work as a full-time a Branch Operations Manager at Fastenal and",
     "I am excited to bring my experiences to a career in Developing.",
