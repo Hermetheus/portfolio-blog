@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.default = void 0;
+exports.default = exports.sanitizeComponents = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -11,31 +11,38 @@ const React = require(`react`);
 
 const fs = require(`fs`);
 
-const _require = require(`path`),
-      join = _require.join;
+const {
+  join
+} = require(`path`);
 
-const _require2 = require(`react-dom/server`),
-      renderToString = _require2.renderToString,
-      renderToStaticMarkup = _require2.renderToStaticMarkup;
+const {
+  renderToString,
+  renderToStaticMarkup
+} = require(`react-dom/server`);
 
-const _require3 = require(`@reach/router`),
-      ServerLocation = _require3.ServerLocation,
-      Router = _require3.Router,
-      isRedirect = _require3.isRedirect;
+const {
+  ServerLocation,
+  Router,
+  isRedirect
+} = require(`@reach/router`);
 
-const _require4 = require(`lodash`),
-      get = _require4.get,
-      merge = _require4.merge,
-      isObject = _require4.isObject,
-      flatten = _require4.flatten,
-      uniqBy = _require4.uniqBy;
+const {
+  get,
+  merge,
+  isObject,
+  flatten,
+  uniqBy,
+  flattenDeep,
+  replace
+} = require(`lodash`);
 
 const apiRunner = require(`./api-runner-ssr`);
 
 const syncRequires = require(`./sync-requires`);
 
-const _require5 = require(`gatsby/package.json`),
-      gatsbyVersion = _require5.version;
+const {
+  version: gatsbyVersion
+} = require(`gatsby/package.json`);
 
 const stats = JSON.parse(fs.readFileSync(`${process.cwd()}/public/webpack.stats.json`, `utf-8`));
 const chunkMapping = JSON.parse(fs.readFileSync(`${process.cwd()}/public/chunk-map.json`, `utf-8`)); // const testRequireError = require("./test-require-error")
@@ -94,9 +101,26 @@ const loadPageDataSync = pagePath => {
 const createElement = React.createElement;
 
 const sanitizeComponents = components => {
+  const componentsArray = ensureArray(components);
+  return componentsArray.map(component => {
+    // Ensure manifest is always loaded from content server
+    // And not asset server when an assetPrefix is used
+    if (__ASSET_PREFIX__ && component.props.rel === `manifest`) {
+      return React.cloneElement(component, {
+        href: replace(component.props.href, __ASSET_PREFIX__, ``)
+      });
+    }
+
+    return component;
+  });
+};
+
+exports.sanitizeComponents = sanitizeComponents;
+
+const ensureArray = components => {
   if (Array.isArray(components)) {
-    // remove falsy items
-    return components.filter(val => Array.isArray(val) ? val.length > 0 : val);
+    // remove falsy items and flatten
+    return flattenDeep(components.filter(val => Array.isArray(val) ? val.length > 0 : val));
   } else {
     // we also accept single components, so we need to handle this case as well
     return components ? [components] : [];
@@ -165,11 +189,13 @@ var _default = (pagePath, callback) => {
   const pageDataRaw = fs.readFileSync(getPageDataFile(pagePath));
   const pageData = JSON.parse(pageDataRaw);
   const pageDataUrl = getPageDataUrl(pagePath);
-  const componentChunkName = pageData.componentChunkName;
+  const {
+    componentChunkName
+  } = pageData;
 
   class RouteHandler extends React.Component {
     render() {
-      const props = Object.assign({}, this.props, pageData.result, {
+      const props = Object.assign({}, this.props, {}, pageData.result, {
         // pathContext was deprecated in v2. Renamed to pageContext
         pathContext: pageData.result ? pageData.result.pageContext : undefined
       });
@@ -193,6 +219,7 @@ var _default = (pagePath, callback) => {
   const routerElement = createElement(ServerLocation, {
     url: `${__BASE_PATH__}${pagePath}`
   }, createElement(Router, {
+    id: `gatsby-focus-wrapper`,
     baseuri: `${__BASE_PATH__}`
   }, createElement(RouteHandler, {
     path: `/*`
@@ -302,7 +329,7 @@ var _default = (pagePath, callback) => {
       rel: "preload",
       key: pageDataUrl,
       href: pageDataUrl,
-      crossOrigin: "use-credentials"
+      crossOrigin: "anonymous"
     }));
   }
 

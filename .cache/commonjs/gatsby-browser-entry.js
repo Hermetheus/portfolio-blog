@@ -6,7 +6,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 
 exports.__esModule = true;
 exports.graphql = graphql;
-exports.useStaticQuery = exports.StaticQuery = exports.StaticQueryContext = void 0;
+exports.prefetchPathname = exports.useStaticQuery = exports.StaticQuery = exports.StaticQueryContext = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -27,6 +27,11 @@ var _publicPageRenderer = _interopRequireDefault(require("./public-page-renderer
 
 exports.PageRenderer = _publicPageRenderer.default;
 
+var _loader = _interopRequireDefault(require("./loader"));
+
+const prefetchPathname = _loader.default.enqueue;
+exports.prefetchPathname = prefetchPathname;
+
 const StaticQueryContext = _react.default.createContext({});
 
 exports.StaticQueryContext = StaticQueryContext;
@@ -42,10 +47,12 @@ function StaticQueryDataRenderer({
 }
 
 const StaticQuery = props => {
-  const data = props.data,
-        query = props.query,
-        render = props.render,
-        children = props.children;
+  const {
+    data,
+    query,
+    render,
+    children
+  } = props;
   return _react.default.createElement(StaticQueryContext.Consumer, null, staticQueryData => _react.default.createElement(StaticQueryDataRenderer, {
     data: data,
     query: query,

@@ -29,7 +29,7 @@ const IndexPage = props => {
               Full-Stack Developer someday and I am open to any opportunity that
               comes my way. If you'd like to get in touch, please get in touch!
             </p>
-            <CursorImitator content={introduction.description} />
+            <p>{introduction.description}</p>
             <a href="mailto:allanmolson@gmail.com">
               <button className={indexStyles.button}>Contact Me</button>
             </a>
