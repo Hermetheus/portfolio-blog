@@ -6,33 +6,22 @@ import blogStyles from "./blog.module.scss"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-              bio
-              featuredImage {
-                childImageSharp {
-                  fluid(maxWidth: 630) {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
-                }
-              }
-            }
-            fields {
-              slug
-            }
-          }
+  query {
+    allContentfulBlogPost (
+      sort: {
+      fields:publishedDate,
+      order:DESC,
+    }
+    ){
+      edges{
+        node {
+          title
+          slug
+          publishedDate (fromNow:true)
         }
       }
     }
+  }
   `)
 
   return (
@@ -51,20 +40,13 @@ const BlogPage = () => {
         </div>
       </div>
       <div className={blogStyles.posts}>
-        {data.allMarkdownRemark.edges.map(edge => {
+        {data.allContentfulBlogPost.edges.map(edge => {
           return (
             <div className={blogStyles.border}>
               <li className={blogStyles.post}>
-                <Link to={`/blog/${edge.node.fields.slug}`}>
-                  <h2>{edge.node.frontmatter.title}</h2>
-                  <p>{edge.node.frontmatter.date}</p>
-                  <Img
-                    className={blogStyles.Img}
-                    fluid={
-                      edge.node.frontmatter.featuredImage.childImageSharp.fluid
-                    }
-                  />
-                  <p>{edge.node.frontmatter.bio}</p>
+                <Link to={`/blog/${edge.node.slug}`}>
+                  <h2>{edge.node.title}</h2>
+                  <p>{edge.node.publishedDate}</p>
                 </Link>
               </li>
             </div>
