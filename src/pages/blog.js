@@ -18,6 +18,11 @@ const BlogPage = () => {
           title
           slug
           publishedDate (fromNow:true)
+        	image {
+            fluid(maxWidth: 1800) {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }
@@ -47,6 +52,7 @@ const BlogPage = () => {
                 <Link to={`/blog/${edge.node.slug}`}>
                   <h2>{edge.node.title}</h2>
                   <p>{edge.node.publishedDate}</p>
+                  <Img fluid={edge.node.image.fluid} />
                 </Link>
               </li>
             </div>
