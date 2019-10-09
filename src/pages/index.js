@@ -13,7 +13,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <Head />
-      <div className={indexStyles.card}>
+      <div className={indexStyles.container}>
         <h1 className={indexStyles.title}>
           <CursorImitator content={introduction.tagline} />
         </h1>
@@ -33,7 +33,7 @@ const IndexPage = props => {
             </p>
             <p>{introduction.description}</p>
             <a href="mailto:allanmolson@gmail.com">
-              <button className={indexStyles.button}>Contact Me</button>
+              <button className={indexStyles.btn}>Contact Me</button>
             </a>
           </div>
         </div>
@@ -71,9 +71,7 @@ const IndexPage = props => {
                 className={indexStyles.Img}
                 fluid={props.data.ImageTwo.childImageSharp.fluid}
               />
-              <button className={indexStyles.button}>
-                Certificates Earned
-              </button>
+              <button className={indexStyles.btn}>Certificates Earned</button>
             </a>
           </div>
         </div>

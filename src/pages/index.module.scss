@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-.card {
+.container {
+  padding-top: 35px;
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
+  align-content: center;
   align-items: center;
-  position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-family: "Montserrat", sans-serif;
 }
 
 @-webkit-keyframes appear {
@@ -49,57 +46,6 @@
   padding: 25px;
 }
 
-.portfolio-card {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: all 600ms;
-  transition: all 600ms;
-  z-index: 20;
-}
-
-.portfolio-card div {
-  position: flex;
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  text-align: center;
-  line-height: 200px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 2px;
-}
-
-.portfolio-card .back {
-  background: #222;
-  color: #fff;
-  -webkit-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-
-.flip-container:hover .portfolio-card {
-  -webkit-transform: rotateX(20deg);
-  transform: rotateX(20deg);
-  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
-}
-
-#toggle-flip {
-  display: none;
-}
-
-:checked + .portfolio-card {
-  transform: rotateX(180deg);
-  -webkit-transform: rotateX(180deg);
-}
-
-.flip-container:hover :checked + .portfolio-card {
-  transform: rotateX(160deg);
-  -webkit-transform: rotateX(160deg);
-  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
-}
-
 .Img1 {
   -webkit-animation: appear 1s ease 0s 1 normal;
   -moz-animation: appear 1s ease 0s 1 normal;
@@ -108,6 +54,7 @@
   animation-fill-mode: both;
   width: 840px;
   height: auto;
+  align-items: center;
 }
 .title {
   display: flex;
@@ -154,20 +101,62 @@
   -webkit-border-radius: 50px;
   box-shadow: 0 0 6.5px 6.5px #6b6b6b;
 }
-.button {
+.btn {
+  font-size: 25px;
+  color: white;
+  width: 8em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  position: relative;
+  transition: 0.5s;
+  margin: 0.8em;
   background-color: #006666;
-  border: 1px solid #006666;
-  border-radius: 10px;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 9px 23px;
-  text-decoration: none;
-  align-content: center;
-  margin-top: 5px;
+  border: none;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: #006666;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+  top: calc(50% - 0.6em / 2);
+}
+
+.btn::before {
+  left: 0;
+  z-index: -1;
+}
+.btn::after {
+  right: 0;
+  z-index: -2;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: #006666;
+}
+
+.btn:hover::before {
+  top: 0;
+}
+
+.btn:hover::after {
+  right: -0.4em;
+  filter: brightness(0.8);
 }
 
 .aboutMe {
@@ -185,7 +174,7 @@
   .titlepicture {
     padding: 0;
   }
-  .card {
+  .container {
     padding-top: 0;
     padding-bottom: 25px;
   }
