@@ -24,8 +24,13 @@ body.light-mode {
 body.light-mode a {
   color: #121212;
 }
+
 body.light-mode a:hover {
   color: #006666;
+}
+
+body.light-mode svg path {
+  fill: #121212;
 }
 
 body.dark-mode {

@@ -167,7 +167,7 @@ class Header extends Component {
                 />
                 <ListLink route={appRoutes.resume} routeName={"Resume"} />
                 <ListLink route={appRoutes.blog} routeName={"Blog"} />
-                <ListLink route={appRoutes.portfolio} routeName={"Portfolio"} />
+                {/* <ListLink route={appRoutes.portfolio} routeName={"Portfolio"} /> */}
                 <DarkModeToggle />
               </Nav>
             </Collapse>
