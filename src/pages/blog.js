@@ -6,27 +6,22 @@ import blogStyles from "./blog.module.scss"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
-  query {
-    allContentfulBlogPost (
-      sort: {
-      fields:publishedDate,
-      order:DESC,
-    }
-    ){
-      edges{
-        node {
-          title
-          slug
-          publishedDate (fromNow:true)
-        	image {
-            fluid(maxWidth: 1800) {
-              ...GatsbyContentfulFluid
+    query {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            title
+            slug
+            publishedDate(fromNow: true)
+            image {
+              fluid(maxWidth: 1800) {
+                ...GatsbyContentfulFluid
+              }
             }
           }
         }
       }
     }
-  }
   `)
   // console.log(data)
 
@@ -50,11 +45,14 @@ const BlogPage = () => {
           // console.log(edge)
           return (
             <div className={blogStyles.border}>
-              <li className={blogStyles.post}>
+              <li className={blogStyles.secondcard}>
                 <Link to={`/blog/${edge.node.slug}`}>
                   <h2>{edge.node.title}</h2>
                   <p>{edge.node.publishedDate}</p>
-                  <Img fluid={edge.node.image.fluid} />
+                  <Img
+                    className={blogStyles.img}
+                    fluid={edge.node.image.fluid}
+                  />
                 </Link>
               </li>
             </div>
