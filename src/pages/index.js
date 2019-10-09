@@ -6,8 +6,10 @@ import Head from "../components/head"
 import Layout, { introduction } from "../components/main"
 import CursorImitator from "../utils/CursorImitator"
 import indexStyles from "./index.module.scss"
+import Card from "../components/Card/Card"
 
 const IndexPage = props => {
+  // console.log(props)
   return (
     <Layout>
       <Head />
@@ -35,6 +37,8 @@ const IndexPage = props => {
             </a>
           </div>
         </div>
+        <h1>Projects</h1>
+        <Card />
         <div className={indexStyles.aboutMe}>
           <div className={indexStyles.secondcard}>
             <ul>
@@ -57,6 +61,7 @@ const IndexPage = props => {
               daughter and wife, teaching myself to become a better Developer,
               and working on my house.
             </ul>
+
             <a
               href="https://www.freecodecamp.org/allanmolson"
               target="_blank"
@@ -84,22 +89,34 @@ export const query = graphql`
     ImageOne: file(relativePath: { eq: "images/index.JPG" }) {
       childImageSharp {
         fluid(maxWidth: 1500) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          sizes
+          ...GatsbyImageSharpFluid
         }
       }
     }
     ImageTwo: file(relativePath: { eq: "images/FreeCodeCamp.png" }) {
       childImageSharp {
         fluid(maxWidth: 1500) {
-          base64
-          aspectRatio
-          src
-          srcSet
-          sizes
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allContentfulPortfolio {
+      edges {
+        node {
+          projectName
+          link
+          sourceLink
+          projectDescription {
+            projectDescription
+          }
+          projectLanguages {
+            content
+          }
+          projectImage {
+            fluid(maxWidth: 1260) {
+              ...GatsbyContentfulFluid
+            }
+          }
         }
       }
     }

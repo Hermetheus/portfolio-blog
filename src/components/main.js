@@ -1,8 +1,8 @@
-import React from "react";
-import "../styles/index.scss";
-import Footer from "./footer";
-import Header from "./header";
-import layoutStyles from "./layout.module.scss";
+import React from "react"
+import "../styles/index.scss"
+import Footer from "./footer"
+import Header from "./header"
+import layoutStyles from "./layout.module.scss"
 
 export const introduction = {
   tagline: ["> -- Hello,", "I'm Allan Wakefield-Olson!"],
@@ -16,19 +16,13 @@ export const introduction = {
 }
 
 const Layout = props => {
+  // console.log(props)
   return (
-    <div>
-      <div className={layoutStyles.container}>
-        <div>
-          <Header />
-        </div>
-        <div>
-          <div className={layoutStyles.content}>{props.children}</div>
-        </div>
-        <div />
-      </div>
+    <>
+      <Header />
+      <div className={layoutStyles.content}>{props.children}</div>
       <Footer />
-    </div>
+    </>
   )
 }
 

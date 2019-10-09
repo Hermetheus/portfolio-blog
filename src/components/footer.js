@@ -1,7 +1,7 @@
-import { graphql, Link, useStaticQuery } from "gatsby";
-import React from "react";
-import appRoutes from "../utils/appRoutes";
-import footerStyles from "./footer.module.scss";
+import { graphql, Link, useStaticQuery } from "gatsby"
+import React from "react"
+import appRoutes from "../utils/appRoutes"
+import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`

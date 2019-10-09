@@ -6,37 +6,10 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
   font-family: "Montserrat", sans-serif;
-}
-
-a {
-  color: #ffffff;
-  transition: color 400ms ease-in;
-}
-a:hover {
-  color: #9dbcbc;
-  transition: color 400ms ease-out;
-}
-a:active {
-  color: #9dbcbc;
-}
-
-.firstcard {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  width: 65%;
-  flex-basis: 75%;
-  padding: 1.5rem;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  box-shadow: 0 0 6.5px 6.5px #006aad;
 }
 
 @-webkit-keyframes appear {
@@ -76,14 +49,64 @@ a:active {
   padding: 25px;
 }
 
+.portfolio-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+.portfolio-card div {
+  position: flex;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  line-height: 200px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.portfolio-card .back {
+  background: #222;
+  color: #fff;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.flip-container:hover .portfolio-card {
+  -webkit-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+}
+
+#toggle-flip {
+  display: none;
+}
+
+:checked + .portfolio-card {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+}
+
+.flip-container:hover :checked + .portfolio-card {
+  transform: rotateX(160deg);
+  -webkit-transform: rotateX(160deg);
+  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+}
+
 .Img1 {
-  display: flex;
   -webkit-animation: appear 1s ease 0s 1 normal;
   -moz-animation: appear 1s ease 0s 1 normal;
   -ms-animation: appear 1s ease 0s 1 normal;
   animation: appear 1s ease 0s 1 normal;
   animation-fill-mode: both;
-  width: 600px;
+  width: 840px;
   height: auto;
 }
 .title {
@@ -190,23 +213,7 @@ a:active {
     width: 100%;
     height: 100%;
   }
-  .firstcard {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    width: 95%;
-    height: 350px;
-    flex-basis: 100%;
-    padding: 1.5rem;
-    border-radius: 50px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    background-color: #b7b7b7;
-    box-shadow: 0 0 6.5px 6.5px #6b6b6b;
-  }
+
   .secondcard {
     display: flex;
     justify-content: center;

@@ -28,6 +28,7 @@ const BlogPage = () => {
     }
   }
   `)
+  // console.log(data)
 
   return (
     <Layout>
@@ -46,6 +47,7 @@ const BlogPage = () => {
       </div>
       <div className={blogStyles.posts}>
         {data.allContentfulBlogPost.edges.map(edge => {
+          // console.log(edge)
           return (
             <div className={blogStyles.border}>
               <li className={blogStyles.post}>

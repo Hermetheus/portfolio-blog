@@ -1,6 +1,7 @@
 // Bootstrap scss
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
+
 ::selection {
   color: #006666;
 }
@@ -17,18 +18,18 @@ body {
 body.light-mode {
   background-color: #fff5bb;
   transition: background-color 0.3s ease;
-  color: #10171d;
+  color: #121212;
 }
 
 body.light-mode a {
-
+  color: #121212;
 }
 body.light-mode a:hover {
   color: #006666;
 }
 
 body.dark-mode {
-  background-color: #10171d;
+  background-color: #121212;
   color: #fff;
 }
 
@@ -37,6 +38,7 @@ body.dark-mode span {
 }
 
 body.dark-mode a {
+  color: #fff;
 }
 
 body.dark-mode a:hover {
