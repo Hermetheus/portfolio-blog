@@ -91,6 +91,8 @@ class Header extends Component {
     })
   }
 
+  
+
   render() {
     return (
       <div className={headerStyles.border} style={{ fontSize: "1.2rem" }}>
