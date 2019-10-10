@@ -13,12 +13,12 @@
   width: 8em;
   height: auto;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   text-transform: capitalize;
   position: relative;
   transition: 0.5s;
-  margin-bottom: 15px;
-  background-color: #b7b7b7;
+  margin: 0.8em;
+  background-color: #006666;
   border: none;
 }
 
@@ -28,7 +28,7 @@
   position: absolute;
   width: 0.6em;
   height: 0.6em;
-  background-color: #b7b7b7;
+  background-color: #006666;
   border-radius: 50%;
   transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
   top: calc(50% - 0.6em / 2);
@@ -44,17 +44,15 @@
 }
 
 .btn:hover {
-  color: #b7b7b7;
+  color: black;
 }
 
 .btn:hover::before,
 .btn:hover::after {
   width: 100%;
   height: 100%;
-  color: #b7b7b7;
-
   border-radius: 0;
-  background-color: #b7b7b7;
+  background-color: #006666;
 }
 
 .btn:hover::before {
@@ -171,12 +169,12 @@ h1 {
   border-radius: 50px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
-  background-color: #b7b7b7;
-  box-shadow: 0 0 6.5px 6.5px #6b6b6b;
+  background-color: #b7b7b754;
+  box-shadow: 0 0 6.5px 6.5px #6b6b6b54;
 }
 .button {
-  background-color: #6b6b6b;
-  border: 1px solid #6b6b6b;
+  background-color: #6b6b6b54;
+  border: 1px solid #6b6b6b54;
   border-radius: 10px;
   display: inline-block;
   cursor: pointer;
@@ -195,7 +193,7 @@ h1 {
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
-    box-shadow: 0 0 6.5px 6.5px #6b6b6b;
+    box-shadow: 0 0 6.5px 6.5px #6b6b6b54;
     overflow: hidden;
   }
   .post {

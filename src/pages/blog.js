@@ -36,7 +36,7 @@ const BlogPage = () => {
             like talking.
           </p>
           <a href="mailto:allanmolson@gmail.com">
-            <button className={blogStyles.button}>Contact Me</button>
+            <button className={blogStyles.btn}>Contact Me</button>
           </a>
         </div>
       </div>
