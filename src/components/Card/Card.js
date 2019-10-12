@@ -50,7 +50,7 @@ class Card extends Component {
             {/* {console.log(data)} */}
             {data.allContentfulPortfolio.edges.map((edge, index) => {
               return (
-                <div className={cardStyles.card}>
+                <div className={cardStyles.card} key={index}>
                   <ReactCardFlip
                     isFlipped={this.state.isFlipped}
                     flipDirection="vertical"

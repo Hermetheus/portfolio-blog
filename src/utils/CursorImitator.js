@@ -169,9 +169,9 @@ class CursorImitator extends React.Component {
   }
 
   render() {
-    const { content, className, style } = this.props
+    const { content, className, style, index } = this.props
     return (
-      <div className={className} style={style}>
+      <div className={className} style={style} key={index}>
         {this.loadIntro(content)}
       </div>
     )
