@@ -111,6 +111,21 @@ body.dark-mode a:hover {
     height: auto !important;
     max-width: 85% !important;
   }
+
+  .img {
+    width: 100% !important;
+    height: 350px !important;
+    max-width: 100% !important;
+    flex-basis: 75% !important;
+  }
+
+  .imgbackside {
+    width: 100% !important;
+    height: 350px !important;
+  }
+  .technologies {
+    display: flex !important;
+  }
 }
 
 input[type="checkbox"].dmcheck {
