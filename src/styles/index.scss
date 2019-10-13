@@ -86,7 +86,7 @@ body.dark-mode a:hover {
 }
 
 .card {
-  display: block;
+  display: block !important;
   justify-content: center !important;
   flex-direction: row !important;
   text-align: center !important;
