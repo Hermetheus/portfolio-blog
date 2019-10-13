@@ -15,7 +15,10 @@ const IndexPage = props => {
       <Head />
       <div className={indexStyles.container}>
         <h1 className={indexStyles.title}>
-          <CursorImitator content={introduction.tagline} />
+          <CursorImitator
+            content={introduction.tagline}
+            key={introduction.description}
+          />
         </h1>
         <Img
           className={indexStyles.Img1}

@@ -3,22 +3,31 @@ import ReactCardFlip from "react-card-flip"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import cardStyles from "./card.module.scss"
+import classNames from "classnames"
+import { FormGroup, Input } from "reactstrap"
 
 class Card extends Component {
   constructor() {
     super()
     this.state = {
       isFlipped: false,
+      selectedType: "front-end",
     }
     this.handleClick = this.handleClick.bind(this)
+    this.onSelectChange = this.onSelectChange.bind(this)
   }
 
   handleClick(e) {
     e.preventDefault()
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }))
   }
+  onSelectChange(e) {
+    this.setState({ selectedType: e.target.value })
+  }
 
   render() {
+    const { selectedType } = this.state
+    console.log(selectedType)
     return (
       <StaticQuery
         query={graphql`
@@ -28,6 +37,7 @@ class Card extends Component {
                 node {
                   projectName
                   link
+                  type
                   sourceLink
                   projectDescription {
                     projectDescription
@@ -47,10 +57,30 @@ class Card extends Component {
         `}
         render={data => (
           <>
+            <br />
             {/* {console.log(data)} */}
+            {console.log(this.onSelectChange)}
+            <FormGroup>
+              <Input
+                type="select"
+                placeholder="select"
+                defaultValue={selectedType}
+                onChange={this.onSelectChange}
+              >
+                <option value="front-end">Front End</option>
+                <option value="full-stack">Full Stack</option>
+              </Input>
+            </FormGroup>
             {data.allContentfulPortfolio.edges.map((edge, index) => {
+              // console.log(edge)
+              const isSelectedType = selectedType === edge.node.type
+              console.log(isSelectedType)
+              const singleCardClass = classNames("card", {
+                hide: !isSelectedType,
+              })
+
               return (
-                <div className={cardStyles.card} key={index}>
+                <div className={singleCardClass} key={index}>
                   <ReactCardFlip
                     isFlipped={this.state.isFlipped}
                     flipDirection="vertical"

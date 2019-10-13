@@ -1,21 +1,25 @@
 .card {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  flex-basis: 75%;
-  max-width: 100%;
-  width: 850px;
-  height: 650px;
-  padding: 1.5rem;
-  margin-top: 50px;
-  border-radius: 0.25rem;
-  background-color: #b7b7b754;
-  -moz-border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  box-shadow: 0 3px 6.5px#6b6b6b54, 0 5px 16px #6b6b6b54;
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  text-align: center !important;
+  align-items: center !important;
+  align-content: center !important;
+  flex-basis: 75% !important;
+  max-width: 100% !important;
+  width: 850px !important;
+  height: 650px !important;
+  padding: 1.5rem !important;
+  margin-top: 50px !important;
+  border-radius: 0.25rem !important;
+  background-color: #b7b7b754 !important;
+  -moz-border-radius: 0.25rem !important;
+  -webkit-border-radius: 0.25rem !important;
+  box-shadow: 0 3px 6.5px#6b6b6b54, 0 5px 16px #6b6b6b54 !important;
+}
+
+.hide {
+  display: none;
 }
 
 .img {

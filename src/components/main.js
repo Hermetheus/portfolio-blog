@@ -16,7 +16,6 @@ export const introduction = {
 }
 
 const Layout = props => {
-  // console.log(props)
   return (
     <>
       <Header />
