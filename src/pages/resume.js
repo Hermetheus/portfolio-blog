@@ -1,19 +1,20 @@
-import React from "react";
-import Layout from "../components/main";
-import resume from "../images/AllanWakefieldOlson.pdf";
-import csharp from "../images/csharp.svg";
-import cssSVG from "../images/css3.svg";
-import freeCodeCampSVG from "../images/freecodecamp.svg";
-import gatsbySVG from "../images/gatsby.svg";
-import githubSVG from "../images/github.svg";
-import htmlSVG from "../images/html5.svg";
-import javascriptSVG from "../images/javascript.svg";
-import mysqlSVG from "../images/mysql.svg";
-import npmSVG from "../images/npm.svg";
-import photoshopSVG from "../images/photoshop.svg";
-import reactSVG from "../images/react.svg";
-import vscodeSVG from "../images/vscode.svg";
-import resumeStyles from "./resume.module.scss";
+import React from "react"
+import Layout from "../components/main"
+import resume from "../images/AllanWakefieldOlson.pdf"
+import csharp from "../images/csharp.svg"
+import cssSVG from "../images/css3.svg"
+import freeCodeCampSVG from "../images/freecodecamp.svg"
+import gatsbySVG from "../images/gatsby.svg"
+import githubSVG from "../images/github.svg"
+import htmlSVG from "../images/html5.svg"
+import javascriptSVG from "../images/javascript.svg"
+import mysqlSVG from "../images/mysql.svg"
+import npmSVG from "../images/npm.svg"
+import photoshopSVG from "../images/photoshop.svg"
+import reactSVG from "../images/react.svg"
+import vscodeSVG from "../images/vscode.svg"
+import resumeStyles from "./resume.module.scss"
+import adobexdSVG from "../images/adobexd.svg"
 
 const ResumePage = () => {
   return (
@@ -35,21 +36,43 @@ const ResumePage = () => {
                 </a>
               </div>
               <div className={resumeStyles.pdf}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/allanmolson"
+                  className={resumeStyles.hrefStyles}
+                >
+                  LinkedIn
+                </a>
+              </div>
+              <div className={resumeStyles.pdf}>
                 <a className={resumeStyles.hrefStyles} href={resume} download>
                   Download PDF
                 </a>
               </div>
             </div>
             <div id="about" className={resumeStyles.about}>
-              Hi, I'm Allan. A self taught highly motivated developer. I have a
+              Hi, I'm Allan. A self taught highly motivated Developer. I have a
               primary focus on Front-End, UI/UX and with years of customer
               service interactions. I have knowledge with many different
-              languages, however I primarily have utilized Javascript, HTML, and
-              CSS.
+              languages, however I primarily have utilized HTML, CSS,
+              JavaScript, React, Graphql, MongoDB
             </div>
             <div className={resumeStyles.experience}>
               <h4>EXPERIENCE</h4>
               <div id="workExperience">
+                <h3>Freelance on Upwork</h3>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.upwork.com/freelancers/~0133be73949eda1799"
+                  className={resumeStyles.hrefStyles}
+                >
+                  Freelance - October 2019 - Present
+                </a>
+                I'm on a Rising Talent on Upwork, working on miscellaneous needs
+                for clients. Mainly creating Landing Pages, Responsive Fixes,
+                SEO, and Optimization of sites.
                 <h3>E-Commerce Website</h3>
                 <a
                   target="_blank"
@@ -57,7 +80,7 @@ const ResumePage = () => {
                   href="https://www.minnitravelers.com"
                   className={resumeStyles.hrefStyles}
                 >
-                  MinniTravelers - January 2019 - Present - Template Design
+                  MinniTravelers - January 2019 - Present - E-Commerce Website
                 </a>
                 MinniTravelers is a startup company I am designing a e-commerce
                 site which is on the Content Manager Wordpress, with
@@ -149,10 +172,19 @@ const ResumePage = () => {
                 <li>UI/UX</li>
                 <li>Design Research</li>
                 <li>Grid & Layout</li>
+                <li>WireFrames</li>
               </ul>
 
               <h4 className={resumeStyles.mt5}>TOOLS</h4>
               <div className={resumeStyles.designtools}>
+                <span>
+                  <img
+                    className={resumeStyles.grow}
+                    src={adobexdSVG}
+                    alt="AdobeXd"
+                  />
+                  AdobeXd
+                </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
