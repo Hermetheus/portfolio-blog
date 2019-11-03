@@ -3,6 +3,7 @@ import "../styles/index.scss"
 import Footer from "./footer"
 import Header from "./header"
 import layoutStyles from "./layout.module.scss"
+import Head from "./head"
 
 export const introduction = {
   tagline: ["> -- Hello,", "I'm Allan Wakefield-Olson!"],
@@ -18,6 +19,7 @@ export const introduction = {
 const Layout = props => {
   return (
     <>
+      <Head />
       <Header />
       <div className={layoutStyles.content}>{props.children}</div>
       <Footer />

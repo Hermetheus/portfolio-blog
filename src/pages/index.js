@@ -2,17 +2,20 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
-import Head from "../components/head"
 import Layout, { introduction } from "../components/main"
 import CursorImitator from "../utils/CursorImitator"
 import indexStyles from "./index.module.scss"
 import Card from "../components/Card/Card"
+import SEO from "../components/seo"
 
 const IndexPage = props => {
   // console.log(props)
   return (
     <Layout>
-      <Head />
+      <SEO
+        title="Personal Portfolio"
+        keywords={[`blog`, `portfolio`, `looking for work`, `react`]}
+      />
       <div className={indexStyles.container}>
         <h1 className={indexStyles.title}>
           <CursorImitator

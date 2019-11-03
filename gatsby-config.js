@@ -2,11 +2,17 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const siteUrl = process.env.URL || `www.allanmolson.com`
 
 module.exports = {
   siteMetadata: {
-    title: "Allan Wakefield-Olson",
-    author: "Allan Wakefield-Olson",
+    title: `Allan Wakefield-Olson's Personal Portfolio`,
+    author: `Allan Wakefield-Olson`,
+    description: `Personal Portfolio Built with Gatsby, Looking for Work!`,
+    siteUrl,
+    social: {
+      linkedin: `linkedin.com/in/allanmolson`,
+    },
   },
   plugins: [
     {
@@ -84,10 +90,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-use-dark-mode",
       options: {
-         classNameDark: "dark-mode",
-         classNameLight: "light-mode",
-         storageKey: "darkMode",
-         minify: true,
+        classNameDark: "dark-mode",
+        classNameLight: "light-mode",
+        storageKey: "darkMode",
+        minify: true,
       },
     },
     `gatsby-plugin-offline`,
