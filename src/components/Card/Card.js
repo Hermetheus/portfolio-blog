@@ -27,7 +27,7 @@ class Card extends Component {
 
   render() {
     const { selectedType } = this.state
-    console.log(selectedType)
+    // console.log(selectedType)
     return (
       <StaticQuery
         query={graphql`
@@ -35,6 +35,7 @@ class Card extends Component {
             allContentfulPortfolio {
               edges {
                 node {
+                  id
                   projectName
                   link
                   type
@@ -58,8 +59,8 @@ class Card extends Component {
         render={data => (
           <>
             <br />
-            {/* {console.log(data)} */}
-            {console.log(this.onSelectChange)}
+            {/* {console.log(data)}
+            {console.log(this.onSelectChange)} */}
             <FormGroup>
               <Input
                 type="select"
@@ -74,34 +75,33 @@ class Card extends Component {
             {data.allContentfulPortfolio.edges.map((edge, index) => {
               // console.log(edge)
               const isSelectedType = selectedType === edge.node.type
-              console.log(isSelectedType)
+              // console.log(isSelectedType)
               const singleCardClass = classNames("card", {
                 hide: !isSelectedType,
               })
 
               return (
-                <div className={singleCardClass} key={index}>
+                <div className={singleCardClass} key={edge.node.id}>
                   <ReactCardFlip
                     isFlipped={this.state.isFlipped}
                     flipDirection="vertical"
+                    cardZIndex="auto"
                     key={index}
                   >
                     <div key="front">
-                      <div key={index}>
-                        <div>
-                          {/* {console.log(edge)} */}
-                          <Img
-                            className={cardStyles.img}
-                            fluid={edge.node.projectImage.fluid}
-                          />
-                          <h3>{edge.node.projectName}</h3>
-                          <button
-                            className={cardStyles.btn}
-                            onClick={this.handleClick}
-                          >
-                            See Details
-                          </button>
-                        </div>
+                      <div key={edge.node.id}>
+                        {/* {console.log(edge)} */}
+                        <Img
+                          className={cardStyles.img}
+                          fluid={edge.node.projectImage.fluid}
+                        />
+                        <h3>{edge.node.projectName}</h3>
+                        <button
+                          className={cardStyles.btn}
+                          onClick={this.handleClick}
+                        >
+                          See Details
+                        </button>
                       </div>
                     </div>
 

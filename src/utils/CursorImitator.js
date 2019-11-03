@@ -159,7 +159,11 @@ class CursorImitator extends React.Component {
           const refName = "line_" + index
           const isLast = contentLast === index
           return (
-            <div ref={refName} className={this.props.letterWrapClass}>
+            <div
+              ref={refName}
+              className={this.props.letterWrapClass}
+              key={index}
+            >
               {this.state.mounted && this.loadLetter(sentence, refName, isLast)}
             </div>
           )
