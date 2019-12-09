@@ -2,14 +2,14 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-const siteUrl = process.env.URL || `www.allanmolson.com`
+const siteUrl = process.env.URL || `https://www.allanmolson.com`
 
 module.exports = {
   siteMetadata: {
     title: `Allan Wakefield-Olson's Personal Portfolio`,
     author: `Allan Wakefield-Olson`,
-    description: `Personal Portfolio Built with Gatsby, Looking for Work!`,
-    siteUrl,
+    description: `Allan Wakefield Olson's Personal Portfolio Built with Gatsby, Looking for Work!`,
+    siteUrl: siteUrl,
     social: {
       linkedin: `linkedin.com/in/allanmolson`,
     },

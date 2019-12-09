@@ -1,10 +1,8 @@
 import React, { Component } from "react"
-import ReactCardFlip from "react-card-flip"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import cardStyles from "./card.module.scss"
-import classNames from "classnames"
 import { FormGroup, Input } from "reactstrap"
+import EachCard from "./EachCard"
+import classNames from "classnames"
 
 class Card extends Component {
   constructor() {
@@ -24,7 +22,6 @@ class Card extends Component {
   onSelectChange(e) {
     this.setState({ selectedType: e.target.value })
   }
-
   render() {
     const { selectedType } = this.state
     // console.log(selectedType)
@@ -72,88 +69,24 @@ class Card extends Component {
                 <option value="full-stack">Full Stack</option>
               </Input>
             </FormGroup>
-            {data.allContentfulPortfolio.edges.map((edge, index) => {
-              // console.log(edge)
+            {data.allContentfulPortfolio.edges.map(edge => {
               const isSelectedType = selectedType === edge.node.type
               // console.log(isSelectedType)
+              // console.log(edge)
               const singleCardClass = classNames("card", {
                 hide: !isSelectedType,
               })
 
               return (
-                <div className={singleCardClass} key={edge.node.id}>
-                  <ReactCardFlip
-                    isFlipped={this.state.isFlipped}
-                    flipDirection="vertical"
-                    cardZIndex="auto"
-                    key={index}
-                  >
-                    <div key="front">
-                      <div key={edge.node.id}>
-                        {/* {console.log(edge)} */}
-                        <Img
-                          className={cardStyles.img}
-                          fluid={edge.node.projectImage.fluid}
-                        />
-                        <h3>{edge.node.projectName}</h3>
-                        <button
-                          className={cardStyles.btn}
-                          onClick={this.handleClick}
-                        >
-                          See Details
-                        </button>
-                      </div>
-                    </div>
-
-                    <div key="back">
-                      <Img
-                        className={cardStyles.imgbackside}
-                        fluid={edge.node.projectImage.fluid}
-                      />
-                      <div>
-                        <span>
-                          <hr />
-                          View Code:{" "}
-                          <a
-                            href={edge.node.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <b>Demo</b>
-                          </a>
-                          {" / "}
-                          <a
-                            href={edge.node.sourceLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <b>Source</b>
-                          </a>
-                        </span>
-                      </div>
-                      <h3>Technologies Used</h3>
-                      <ul>
-                        {edge.node.projectLanguages.map((items, index) => {
-                          // console.log(items)
-                          return (
-                            <ul className={cardStyles.technologies} key={index}>
-                              {items.content}
-                            </ul>
-                          )
-                        })}
-                      </ul>
-                      <span>
-                        {edge.node.projectDescription.projectDescription}
-                      </span>
-                      <button
-                        className={cardStyles.btn}
-                        onClick={this.handleClick}
-                      >
-                        Back to Front!
-                      </button>
-                    </div>
-                  </ReactCardFlip>
-                </div>
+                <>
+                  <div className={singleCardClass}>
+                    <EachCard
+                      item={edge}
+                      key={edge.node.id}
+                      value={edge.node.type}
+                    />
+                  </div>
+                </>
               )
             })}
           </>

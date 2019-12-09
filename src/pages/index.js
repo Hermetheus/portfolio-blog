@@ -13,7 +13,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO
-        title="Personal Portfolio"
+        title="Allan Olson's Personal Portfolio"
         keywords={[`blog`, `portfolio`, `looking for work`, `react`]}
       />
       <div className={indexStyles.container}>
