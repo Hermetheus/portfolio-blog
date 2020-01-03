@@ -38,6 +38,7 @@ class Card extends Component {
                   className={cardStyles.img}
                   fluid={node.projectImage.fluid}
                 />
+                <hr />
                 <h3>{node.projectName}</h3>
                 <h6>Technologies Used</h6>
                 <ul>

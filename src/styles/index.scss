@@ -2,6 +2,17 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #6b6b6b);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #006666);
+}
+
 ::selection {
   color: #006666;
 }

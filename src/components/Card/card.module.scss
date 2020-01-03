@@ -25,18 +25,16 @@
 .img {
   display: flex;
   justify-content: center;
-  width: 750px;
-  height: 100%;
-  max-width: 100%;
-  flex-basis: 75%;
   width: 800px;
-  max-width: 100%;
-  flex-basis: 75%;
+  height: 350px;
 }
 
 .imgbackside {
-  width: 100%;
+  display: relative;
+  width: 800px;
   height: 350px;
+  align-items: center;
+  justify-content: center;
 }
 .technologies {
   display: inline;
@@ -110,8 +108,6 @@
   .img {
     width: 100%;
     height: 350px;
-    max-width: 100%;
-    flex-basis: 75%;
   }
 
   .imgbackside {
