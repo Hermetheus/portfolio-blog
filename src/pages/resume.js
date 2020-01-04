@@ -15,6 +15,8 @@ import reactSVG from "../images/react.svg"
 import vscodeSVG from "../images/vscode.svg"
 import resumeStyles from "./resume.module.scss"
 import adobexdSVG from "../images/adobexd.svg"
+import pythonSVG from "../images/python-icon.svg"
+import graphqlSVG from "../images/graphql-icon.svg"
 
 const ResumePage = () => {
   return (
@@ -53,27 +55,16 @@ const ResumePage = () => {
             </div>
             <div id="about" className={resumeStyles.about}>
               Hi, I'm Allan. A self taught highly motivated Developer. I have a
-              primary focus on Front-End, UI/UX and with years of customer
-              service interactions. I have knowledge with many different
-              languages, however I primarily have utilized HTML, CSS,
-              JavaScript, React, Graphql, MongoDB
+              primary focus on Front-End, UI/UX and with years of management and
+              customer service experience. I have knowledge with many different
+              languages, I am proficient in HTML, CSS, JavaScript, React,
+              MongoDB and GraphQL. I am familiar with C#, Python, MySQL and
+              other Technologies.
             </div>
             <div className={resumeStyles.experience}>
               <h4>EXPERIENCE</h4>
               <div id="workExperience">
-                <h3>Freelance on Upwork</h3>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.upwork.com/freelancers/~0133be73949eda1799"
-                  className={resumeStyles.hrefStyles}
-                >
-                  Freelance - October 2019 - Present
-                </a>
-                I'm on a Rising Talent on Upwork, working on miscellaneous needs
-                for clients. Mainly creating Landing Pages, Responsive Fixes,
-                SEO, and Optimization of sites.
-                <h3>E-Commerce Website</h3>
+                <h3>MinniTravelers</h3>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -88,17 +79,42 @@ const ResumePage = () => {
                 <h3>Personal Portfolio</h3>
                 <a
                   target="_blank"
-                  href="www.allanmolson.com"
+                  href="https://www.allanmolson.com"
                   rel="noopener noreferrer"
                   className={resumeStyles.hrefStyles}
                 >
                   My Personal Portfolio - May 2019 - Present
                 </a>
                 My personal portfolio is made with a static website generator
-                known as GatsbyJS. It is a react based platform.
+                known as GatsbyJS.
+                <br />
+                Utilized: HTML, CSS, JavaScript, React, GatsbyJS, GraphQL,
+                Contentful & Netlify.
                 <a
                   target="_blank"
                   href="https://github.com/Hermetheus/portfolio-blog"
+                  rel="noopener noreferrer"
+                  className={resumeStyles.hrefStyles}
+                >
+                  Source Code Here
+                </a>
+                <h3>Dev Connector</h3>
+                <a
+                  target="_blank"
+                  href="https://reactdevconnector.herokuapp.com/"
+                  rel="noopener noreferrer"
+                  className={resumeStyles.hrefStyles}
+                >
+                  Dev Connector
+                </a>
+                A Developer Portal for other Developers to connect with one
+                another
+                <br />
+                Utilized: HTML, CSS, JavaScript, React, Redux, MongoDB, Express,
+                NodeJS, Heroku
+                <a
+                  target="_blank"
+                  href="https://github.com/Hermetheus/Dev-Connector"
                   rel="noopener noreferrer"
                   className={resumeStyles.hrefStyles}
                 >
@@ -183,7 +199,7 @@ const ResumePage = () => {
                     src={adobexdSVG}
                     alt="AdobeXd"
                   />
-                  AdobeXd
+                  <div>AdobeXD</div>
                 </span>
                 <span>
                   <img
@@ -191,7 +207,7 @@ const ResumePage = () => {
                     src={photoshopSVG}
                     alt="Photoshop"
                   />
-                  Photoshop
+                  <div>Photoshop</div>
                 </span>
                 <span>
                   <img
@@ -206,7 +222,7 @@ const ResumePage = () => {
                     rel="noopener noreferrer"
                     className={resumeStyles.educationStyles}
                   >
-                    Github
+                    <div>Github</div>
                   </a>
                 </span>
                 <span>
@@ -215,11 +231,11 @@ const ResumePage = () => {
                     alt="VsCode"
                     src={vscodeSVG}
                   />
-                  VsCode
+                  <div>VsCode</div>
                 </span>
                 <span>
                   <img className={resumeStyles.grow} alt="npm" src={npmSVG} />
-                  NPM
+                  <div>NPM</div>
                 </span>
                 <span>
                   <img
@@ -228,14 +244,27 @@ const ResumePage = () => {
                     style={{ backgroundColor: "	#ffffff" }}
                     src={freeCodeCampSVG}
                   />
-                  freeCodeCamp
+                  <div>freeCodeCamp</div>
                 </span>
               </div>
               <h4 className={resumeStyles.mt5}>DEVELOPMENT SKILLS</h4>
               <div className={resumeStyles.designtools}>
                 <span>
                   <img className={resumeStyles.grow} alt="HTML" src={htmlSVG} />
-                  HTML5
+                  <div>HTML5</div>
+                </span>
+
+                <span>
+                  <img
+                    className={resumeStyles.grow}
+                    alt="Javascript"
+                    src={javascriptSVG}
+                  />
+                  <div>Javascript</div>
+                </span>
+                <span>
+                  <img className={resumeStyles.grow} alt="CSS" src={cssSVG} />
+                  <div>CSS3</div>
                 </span>
                 <span>
                   <img
@@ -243,27 +272,23 @@ const ResumePage = () => {
                     alt="React"
                     src={reactSVG}
                   />
-                  React
+                  <div>React</div>
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    alt="GatsbyJS"
-                    src={gatsbySVG}
+                    alt="Python"
+                    src={pythonSVG}
                   />
-                  GatsbyJS
+                  <div>Python</div>
                 </span>
                 <span>
                   <img
                     className={resumeStyles.grow}
-                    alt="Javascript"
-                    src={javascriptSVG}
+                    alt="GraphQL"
+                    src={graphqlSVG}
                   />
-                  Javascript
-                </span>
-                <span>
-                  <img className={resumeStyles.grow} alt="CSS" src={cssSVG} />
-                  CSS3
+                  <div>GraphQL</div>
                 </span>
                 <span>
                   <img
@@ -271,7 +296,7 @@ const ResumePage = () => {
                     alt="MySQL"
                     src={mysqlSVG}
                   />
-                  MySql
+                  <div>MySql</div>
                 </span>
                 <span>
                   <img
@@ -279,7 +304,15 @@ const ResumePage = () => {
                     alt="CSharp"
                     src={csharp}
                   />
-                  C#
+                  <div>C#</div>
+                </span>
+                <span>
+                  <img
+                    className={resumeStyles.grow}
+                    alt="GatsbyJS"
+                    src={gatsbySVG}
+                  />
+                  <div>GatsbyJS</div>
                 </span>
               </div>
             </div>
