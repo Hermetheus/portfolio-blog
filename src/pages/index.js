@@ -58,14 +58,14 @@ const IndexPage = props => {
               <br />I am a completely self-taught developer. I work a full time
               job and I am also full time dad and husband. I am extremely
               interested in becoming a <b>Full Stack Developer</b>. The main
-              languages I have used include primarily Javascript, CSS, HTML,
-              MySQL and C#.
+              languages I have utilized are HTML, CSS, JavaScript, React,
+              NodeJS, Python, MongoDB, MySQL, C#.
             </ul>
             <ul>
               <br />
-              When I am not coding you can find me spending time with my
-              daughter and wife, teaching myself to become a better Developer,
-              and working on my house.
+              When I am not coding you can find me spending time with my wife
+              and daughter, teaching myself to become a better Developer, and
+              working on my house.
             </ul>
 
             <a

@@ -58,7 +58,7 @@ class Card extends Component {
             <br />
             {/* {console.log(data)}
             {console.log(this.onSelectChange)} */}
-            <FormGroup>
+            <FormGroup class="form">
               <Input
                 type="select"
                 placeholder="select"
@@ -69,26 +69,28 @@ class Card extends Component {
                 <option value="full-stack">Full Stack</option>
               </Input>
             </FormGroup>
-            {data.allContentfulPortfolio.edges.map(edge => {
-              const isSelectedType = selectedType === edge.node.type
-              // console.log(isSelectedType)
-              // console.log(edge)
-              const singleCardClass = classNames("card", {
-                hide: !isSelectedType,
-              })
+            <div className="projectContainer">
+              {data.allContentfulPortfolio.edges.map(edge => {
+                const isSelectedType = selectedType === edge.node.type
+                // console.log(isSelectedType)
+                // console.log(edge)
+                const singleCardClass = classNames({
+                  hide: !isSelectedType,
+                })
 
-              return (
-                <>
-                  <div className={singleCardClass}>
-                    <EachCard
-                      item={edge}
-                      key={edge.node.id}
-                      value={edge.node.type}
-                    />
-                  </div>
-                </>
-              )
-            })}
+                return (
+                  <>
+                    <div className={singleCardClass}>
+                      <EachCard
+                        item={edge}
+                        key={edge.node.id}
+                        value={edge.node.type}
+                      />
+                    </div>
+                  </>
+                )
+              })}
+            </div>
           </>
         )}
       />
