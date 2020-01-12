@@ -110,14 +110,14 @@ body.dark-mode a:hover {
 .cardContainer {
   display: flex;
   margin: 15px 0px;
-  max-height: 750px;
+  max-height: 950px;
   height: 100%;
 }
 
 .cardContainer .card {
   width: 550px;
   margin: 20px;
-  height: 650px;
+  height: 750px;
   padding: 40px 30px;
   background: #b7b7b754;
   box-shadow: -6px -6px 10px rgba(29, 34, 36, 1), -6px -6px 5px rgba(0, 0, 0, 1);
@@ -131,13 +131,13 @@ body.dark-mode a:hover {
 .content {
   display: flex;
   flex-direction: column;
-  height: 550px;
+  height: 750px;
   width: auto;
 }
 
 .cardContainer .card .content .cardImg {
   display: flex;
-  height: 60%;
+  height: 50%;
   width: auto;
   position: relative;
   text-align: center;
@@ -167,7 +167,6 @@ body.dark-mode a:hover {
   align-items: center;
   position: relative;
   height: 65%;
-  padding-top: 55px;
   text-align: center;
 }
 
@@ -258,7 +257,7 @@ input[type="checkbox"].dmcheck {
   .cardContainer .card {
     width: 350px;
     margin: 20px;
-    height: 650px;
+    height: 750px;
     padding: 40px 30px;
     background: #b7b7b754;
     box-shadow: -6px -6px 10px rgba(29, 34, 36, 1),
@@ -273,16 +272,16 @@ input[type="checkbox"].dmcheck {
   .content {
     display: flex;
     flex-direction: column;
-    height: 550px;
+    height: 750px;
     width: auto;
   }
 
   .cardContainer .card .content .cardImg {
-    height: 60%;
+    height: 45%;
   }
 
   .cardContainer .card .content .cardBackImg {
-    height: 25%;
+    height: 20%;
   }
 
   .cardContainer .card .content .contentBackBox {
