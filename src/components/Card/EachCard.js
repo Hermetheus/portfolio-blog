@@ -96,7 +96,7 @@ class Card extends Component {
                   </ul>
                   <span>{node.projectDescription.projectDescription}</span>
                   <button className={cardStyles.btn} onClick={this.handleClick}>
-                    Back to Front!
+                    See Front
                   </button>
                 </div>
               </div>
