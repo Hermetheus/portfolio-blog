@@ -1,6 +1,7 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
-import appRoutes from "../utils/appRoutes"
+import appRoutes from "../../utils/appRoutes"
+import { year } from "../../utils/helpers"
 import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
@@ -16,7 +17,9 @@ const Footer = () => {
 
   return (
     <footer className={footerStyles.footer}>
-      <div>©2019 {data.site.siteMetadata.author}</div>
+      <div>
+        @{year} {data.site.siteMetadata.author}
+      </div>
       <ul className={footerStyles.ul}>
         <a
           href="https://www.linkedin.com/in/allanmolson/"
