@@ -1,9 +1,9 @@
 import React from "react"
 import "../styles/index.scss"
-import Footer from "./footer"
-import Header from "./header"
+import Footer from "./Footer/footer"
+import Header from "./Header/header"
 import layoutStyles from "./layout.module.scss"
-import Head from "./head"
+import Head from "./Header/head"
 
 export const introduction = {
   tagline: ["> -- Hello,", "I'm Allan Wakefield-Olson!"],

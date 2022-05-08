@@ -6,7 +6,7 @@ import Layout, { introduction } from "../components/main"
 import CursorImitator from "../utils/CursorImitator"
 import indexStyles from "./index.module.scss"
 import Card from "../components/Card/Card"
-import SEO from "../components/seo"
+import SEO from "../components/Seo/seo"
 
 const IndexPage = props => {
   // console.log(props)

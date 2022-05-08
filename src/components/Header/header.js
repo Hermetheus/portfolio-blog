@@ -8,8 +8,8 @@ import {
   NavbarToggler,
   NavItem,
 } from "reactstrap"
-import appRoutes from "../utils/appRoutes"
-import DarkModeToggle from "../utils/DarkMode/DarkModeToggle.js"
+import appRoutes from "../../utils/appRoutes"
+import DarkModeToggle from "../../utils/DarkMode/DarkModeToggle.js"
 import headerStyles from "./header.module.scss"
 
 const isActive = ({ isCurrent }) => {
@@ -90,8 +90,6 @@ class Header extends Component {
       isOpen: !this.state.isOpen,
     })
   }
-
-  
 
   render() {
     return (
